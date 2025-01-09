@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mapper device="XONEK2" author="Atomix Productions" version="850" date="2025-01-06">
+<mapper device="XONEK2" author="Atomix Productions" version="850" date="2025-01-09">
 	<info>https://www.virtualdj.com/manuals/hardware/allenheath/k2.html</info>
-	<map value="2XK2_BUTTON_M" action="var &apos;@$latchlayer&apos; 0 ? pioneer_play : 
-var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; var_equal $am_energy_pos 3 ? nothing : (cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; param_cast &amp; debug &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter &amp; debug) : off &amp; cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter" />
+	<map value="2XK2_BUTTON_M" action="var &apos;@$latchlayer&apos; 0 ? pioneer_play :
+var &apos;@$latchlayer&apos; 1 ? quick_filter 33 ? on &amp; quick_filter off &amp; : off &amp; set_var $energy_neg_am_cycle 1 &amp; get_var &apos;$energy_neg_am_cycle&apos; &amp; param_invert &amp; param_cast &amp; set_var &apos;$energy_neg_am_temp&apos; &amp; param_add &quot;get_var &apos;$energy_neg_am_temp&apos;&quot; -1 &amp; param_cast &amp; set_var &apos;$energy_neg_am_mod&apos; &amp; get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $energy_neg_am_mod &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter  &amp; var_list :
+" />
 	<map value="2XK2_BUTTON_P" action="var &apos;@$latchlayer&apos; 0 ? pioneer_play :
 var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; var_equal $am_energy_pos 3 ? nothing : (cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; param_cast &amp; debug &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter &amp; debug) : off &amp; cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter" />
 	<map value="2XK2_BUTTON_L" action="var &apos;@$latchlayer&apos; 0 ? pioneer_cue : 
@@ -23,7 +24,7 @@ var &apos;@$latchlayer&apos; 1 ? quick_filter 15" />
 	<map value="2XK2_BUTTON_K" action="var &apos;@$latchlayer&apos; 0 ? masterdeck" />
 	<map value="SHIFT" action="shift" />
 	<map value="2XK2_BUTTON_E" action="var &apos;@$latchlayer&apos; 0 ? pioneer_play : 
-var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; toggle $energy_pos_status &amp; get_var $energy_pos_status &amp; param_cast &amp; debug : off &amp; toggle $energy_pos_status &amp; get_var $energy_pos_status &amp; param_cast &amp; debug &amp; get_var $am_energy_pos &amp; get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter :
+var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; toggle $energy_pos_status &amp; get_var $energy_pos_status &amp; param_cast &amp; debug : off &amp; toggle $energy_pos_status &amp;  get_var $am_energy_pos &amp; get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter :
 var &apos;@$latchlayer&apos; 2 ? nothing" />
 	<map value="2XK2_BUTTON_H" action="var &apos;@$latchlayer&apos; 0 ? reverse : 
 var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; var_equal $am_energy_pos 3 ? nothing : (cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; param_cast &amp; debug &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter &amp; debug) : off &amp; cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter" />
@@ -56,13 +57,14 @@ var &apos;@$latchlayer&apos; 1 ? var $energy_pos_status ? var_equal $am_energy_p
 var &apos;@$latchlayer&apos; 1 ? quick_filter 5 ? color red: quick_filter 6 ? color orange : quick_filter 7 ? color green : nothing" />
 	<map value="LED_2XK2_BUTTON_N" action="var &apos;@$latchlayer&apos; 0 ? ( auto_match_bpm ? color red ) : 
 var &apos;@$latchlayer&apos; 1 ? var $energy_pos_status ? var_equal $am_energy_pos 1 ? color green : var_equal $am_energy_pos 2 ? color orange : var_equal $am_energy_pos 3 ? color red :" />
-	<map value="2XK2_BUTTON_N" action="var &apos;@$latchlayer&apos; 0 ?  auto_match_bpm &amp; match_bpm : 
-var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; var_equal $am_energy_pos 3 ? nothing : (cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; param_cast &amp; debug &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter &amp; debug) : off &amp; cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter" />
+	<map value="2XK2_BUTTON_N" action="var &apos;@$latchlayer&apos; 0 ? pioneer_play :
+var &apos;@$latchlayer&apos; 1 ? quick_filter 33 ? on &amp; quick_filter off &amp; : off &amp; set_var $energy_neg_am_cycle 1 &amp; get_var &apos;$energy_neg_am_cycle&apos; &amp; param_invert &amp; param_cast &amp; set_var &apos;$energy_neg_am_temp&apos; &amp; param_add &quot;get_var &apos;$energy_neg_am_temp&apos;&quot; -1 &amp; param_cast &amp; set_var &apos;$energy_neg_am_mod&apos; &amp; get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $energy_neg_am_mod &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter  &amp; var_list :
+" />
 	<map value="K2L_2XK2_ENC_BTM_L" action="browser_window folders &amp; browser_scroll" />
 	<map value="SHIFT_K2L_2XK2_ENC_BTM_L_PUSH" action="add_favoritefolder" />
 	<map value="SHIFT_2XK2_BUTTON_M" action="var &apos;@$latchlayer&apos; 0 ? load :
-var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; (var_equal $am_energy_pos 3 ? set_var $am_energy_pos 1 : cycle $am_energy_pos 4 ) &amp; get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter : nothing :
-var &apos;@$latchlayer&apos; 2 ? nothing " />
+var &apos;@$latchlayer&apos; 1 ? quick_filter 33 ? on &amp; quick_filter off &amp; cycle $energy_neg_am_cycle 3 &amp; get_var &apos;$energy_neg_am_cycle&apos; &amp; param_invert &amp; param_cast &amp; set_var &apos;$energy_neg_am_temp&apos; &amp; param_add &quot;get_var &apos;$energy_neg_am_temp&apos;&quot; -1 &amp; param_cast &amp; set_var &apos;$energy_neg_am_mod&apos; &amp; get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $energy_neg_am_mod &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter : nothing :
+" />
 	<map value="SHIFT_2XK2_BUTTON_J" action="var &apos;@$latchlayer&apos; 0 ? master_tempo " />
 	<map value="SHIFT_2XK2_BUTTON_K" action="var &apos;@$latchlayer&apos; 0 ? master_tempo " />
 	<map value="K2L_2XK2_ENC_BTM_R" action="browser_window songs &amp; browser_scroll " />
@@ -84,7 +86,10 @@ set_var &apos;$numread&apos; &quot;param_add &apos;get_loaded_song track &amp; p
 set_var &apos;$field_energy &quot;Track&quot; &apos; &amp;
 set_var &apos;$field_energy_pos&apos; &quot;Track&quot; &amp;
 set_var &apos;$am_energy_pos&apos; 1 &amp;
-set_var $energy_pos_status 0
+set_var $energy_pos_status 0 &amp;
+set_var $energy_neg_status 0 &amp; 
+set_var &apos;$energy_neg_am_cycle&apos; 1
+
 " />
 	<map value="2XK2_BUTTON_O" action="var &apos;@$latchlayer&apos; 0 ? auto_match_bpm &amp; match_bpm :
 var &apos;@$latchlayer&apos; 1 ? quick_filter 0 ? on &amp; quick_filter off &amp; var_equal $am_energy_pos 3 ? nothing : (cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; param_cast &amp; debug &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter &amp; debug) : off &amp; cycle $am_energy_pos 3 &amp; get_var $am_energy_pos &amp; var $am_energy_pos 0 ? nothing : get_text &quot;`get_var $field_energy_pos` = `param_add &apos;get_loaded_song track &amp; param_cast int&apos; &apos;get_var $am_energy_pos &amp; param_cast int &apos;`&quot; &amp; param_cast &amp; quick_filter" />
