@@ -13,8 +13,12 @@ WIP.
 
 ### 16 pages of functionality
 
-instead of using the mode button to cycle through 3 mere pages
-it brings you to a menu page.
+instead of using the mode button to cycle through 3 mere pages,
+it shows a menu page
+with buttons A-P representing a sub-menu each.
+This means 16 pages in total,
+some still assignable.
+The shift button could allow for 16 more.
 
 ### Consistent, square deck control layout
 
@@ -33,3 +37,7 @@ Furthermore,
 deck controls themselves are not mirrored
 (like they would be with VirtualDJ's automatic deck assignment).
 This reduces mental overhead and missinputs.
+
+# Extensive track browser filtering
+
+WIP
