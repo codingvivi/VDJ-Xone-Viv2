@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapper device="XONEK2" author="musicvivireal" version="850" date="2025-05-11">
 	<info>https://www.virtualdj.com/manuals/hardware/allenheath/k2.html</info>
-	<map value="ONINIT" action="set &apos;longjump&apos; 1 &amp; set_var &apos;$tests&apos; 2 &amp;  set_var &apos;$testing&apos; &quot;Key Difference  &lt;= `get_var &apos;tests&apos; `&quot; &amp;  set_var &apos;$numread&apos; &quot;param_add &apos;get_loaded_song track &amp; param_cast int&apos;&quot; &amp; set_var &apos;$field_energy &quot;Track&quot; &apos; &amp; set_var &apos;$field_energy_pos&apos; &quot;Track&quot; &amp; set_var &apos;$energy_pos_am&apos; 1 &amp; set_var $energy_pos_status 0 &amp; set_var $energy_neg_status 0 &amp;  set_var &apos;$energy_neg_am_cycle&apos; 1  " />
+	<map value="ONINIT" action="set &apos;longjump&apos; 1 &amp; set_var &apos;$tests&apos; 2 &amp;  set_var &apos;$testing&apos; &quot;Key Difference  &lt;= `get_var &apos;tests&apos; `&quot; &amp;  set_var &apos;$numread&apos; &quot;param_add &apos;get_loaded_song track &amp; param_cast int&apos;&quot; &amp; set_var &apos;$field_energy &quot;Track&quot; &apos; &amp; set_var &apos;$field_energy_pos&apos; &quot;Track&quot; &amp; set_var &apos;$energy_pos_am&apos; 1 &amp; set_var $energy_pos_status 0 &amp; set_var $energy_neg_status 0 &amp;  set_var &apos;$energy_neg_am_cycle&apos; 1  &amp; ( deck master repeat_start filterUpdate ? on : off ) &amp; set $storeBPM `deck master get_bpm &amp; param_cast int_trunc` &amp; set $storekey `deck master get_key` &amp; deck master repeat_start filterUpdate ? repeat_stop filterUpdate : repeat_start filterUpdate 1000ms &amp; set $changed 0 &amp; quick_filter !? set $filter01 0 &amp; set $filter02 0 &amp; set $filter03 0 : ( quick_filter 1 ? set $filter01 1 : set $filter01 0 ) &amp; ( quick_filter 2 ? set $filter02 1 : set $filter02 0 ) &amp; ( quick_filter 3 ? set $filter03 1 : set $filter03 0 ) &amp; ( quick_filter 1 ? param_equal `deck master get_bpm &amp; param_cast int_trunc` `get_var $storeBPM` ? : set $changed 1 &amp; set $storeBPM `deck master get_bpm &amp; param_cast int_trunc` : ) &amp; ( quick_filter 2 ? param_equal `deck master get_key` `get_var $storekey` ? : set $changed 1 &amp; set $storekey `deck master get_key` : ) &amp; var $changed 1 ? quick_filter off &amp; ( var $filter01 ? quick_filter 1 : ) &amp; ( var $filter02 ? quick_filter 2 : ) &amp; ( var $filter03 ? quick_filter 3 : )" />
 	<map value="K2R_2XK2_MODE" action="set &apos;@$cmdpage&apos; 0" />
 	<map value="K2L_2XK2_ENC_BTM_L" action="browser_window folders &amp; browser_scroll" />
 	<map value="K2L_2XK2_ENC_BTM_R" action="browser_window songs &amp; browser_scroll " />
@@ -113,6 +113,56 @@
 		var &apos;@$cmdpage&apos; 16 ? 
 			()
 			: nothing " />
+	<map value="2XK2_BUTTON_C" action="
+		var &apos;@$cmdpage&apos; 0 ? 
+			(set &apos;@$cmdpage&apos; 3 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
+			: nothing
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 1 pitch_bend -3%)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 3 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 3)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		: var &apos;@$cmdpage&apos; 15 ? 
+			(toggle &apos;@$keysyncd1&apos;) 
+			: nothing &amp;
+		: var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_C" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 3 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
@@ -425,7 +475,7 @@
 			(set &apos;@$cmdpage&apos; 9 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 pioneer_cue)
+			(deck 3 cue)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			(deck 3 slicer 1 hold)
@@ -475,7 +525,7 @@
 			(set &apos;@$cmdpage&apos; 10 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(masterdeck)
+			(deck 3 masterdeck)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			(deck 3 slicer 2 hold)
@@ -625,7 +675,7 @@
 			(set &apos;@$cmdpage&apos; 13 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 3 pioneer_play)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			(deck 3 slicer 5 hold)
@@ -775,7 +825,7 @@
 			(set &apos;@$cmdpage&apos; 16 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 pioneer_play)
+			(deck 3 play)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			(deck 3 slicer 8 hold)
@@ -1655,7 +1705,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 1 hot_cue 1 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1683,21 +1733,15 @@
 				(blink ? color red : nothing) 
 				: color red ) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 master_tempo &amp;&amp; deck 1 masterdeck ? (blink ? color red : color orange) : deck 1 masterdeck ? color red :  deck 1 master_tempo ? color orange : nothing
+			(deck 1 master_tempo &amp;&amp; deck 1 masterdeck ? (blink ? color red : color orange) : deck 1 masterdeck ? color red :  deck 1 master_tempo ? color orange : nothing)
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 2 hold
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			(
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			(
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			((deck 1 slicer 1 hold
-		: var &apos;@$cmdpage&apos; 3 ? 
-			(
-		: var &apos;@$cmdpage&apos; 4 ? 
-			(
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(
+			( deck 1 hot_cue 2 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			(
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1729,13 +1773,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 3 hold)
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 1 hot_cue 3 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1767,13 +1811,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 4 hold)
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 1 hot_cue 4 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1800,15 +1844,15 @@
 		var &apos;@$cmdpage&apos; 0 ? 
 			(var &apos;@$currpage&apos; 5 ? (blink ? color orange) :color orange) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pioneer_play ? color green)
+			(deck 1 songpos_warning ? (deck 1 blink_play ? color red ) : (deck 1 play ? (deck 1 pioneer_play ? color orange ) : (deck 1 pioneer_play ? color green )))
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 5 hold)
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 slicer 1 hold)
+			(deck 1 hot_cue 5 ? color orange)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
@@ -1843,13 +1887,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			(deck 1 beatlock &amp;&amp; var &apos;@$quantized1&apos; ? (var &apos;@$syncbuttond1&apos; ? color green : color red ) : (var &apos;@$syncbuttond1&apos; ? color red : nothing))
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 6 hold)
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 1 hot_cue 6 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1877,13 +1921,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 7 hold)
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 1 hot_cue 7 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1912,13 +1956,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 8 hold)
+			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 1 hot_cue 8 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1945,15 +1989,14 @@
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 3 pioneer_cue ? color orange )
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 1 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -1980,15 +2023,15 @@
 		var &apos;@$cmdpage&apos; 0 ?
 			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 3 master_tempo &amp;&amp; deck 3 masterdeck ? (blink ? color red : color orange) : deck 3 masterdeck ? color red :  deck 3 master_tempo ? color orange : nothing)
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 2 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2017,13 +2060,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			() 
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 3 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2052,13 +2095,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 4 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2085,16 +2128,15 @@
 		var &apos;@$cmdpage&apos; 0 ? 
 			()
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-	
+	(deck 3 songpos_warning ? (deck 3 blink_play ? color red ) : (deck 3 play ? (deck 3 pioneer_play ? color orange ) : (deck 3 pioneer_play ? color green )))
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 5 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2123,13 +2165,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 6 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2158,13 +2200,13 @@
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 7 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2188,18 +2230,18 @@
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_P" action="
-		: var &apos;@$cmdpage&apos; 0 ?
+		var &apos;@$cmdpage&apos; 0 ?
 			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
 			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			()
+			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
 			()
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			()
+			( deck 3 hot_cue 8 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2234,7 +2276,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 1 ? (blink ? color red)
+			(deck 3 delete_cue 1 ? (blink ? color red)
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2269,7 +2311,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 2 ? (blink ? color red))
+			(deck 3 delete_cue 2 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2304,7 +2346,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 3 ? (blink ? color red))
+			(deck 3 delete_cue 3 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2339,7 +2381,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 4 ? (blink ? color red))
+			(deck 3 delete_cue 4 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2374,7 +2416,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 5 ? (blink ? color red))
+			(deck 3 delete_cue 5 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2409,7 +2451,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 6 ? (blink ? color red))
+			(deck 3 delete_cue 6 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2444,7 +2486,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 7 ? (blink ? color red))
+			(deck 3 delete_cue 7 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
@@ -2479,7 +2521,7 @@
 		: var &apos;@$cmdpage&apos; 4 ? 
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 8 ? (blink ? color red))
+			(deck 3 delete_cue 8 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
 			()
 		: var &apos;@$cmdpage&apos; 7 ? 
