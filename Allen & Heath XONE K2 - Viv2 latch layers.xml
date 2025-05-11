@@ -57,7 +57,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 15 ? 
-			(toggle &apos;@$pitchlockd1&apos;)
+			(deck 1 toggle &apos;@pitchlck&apos; )
 			: nothing &amp;
 		: var &apos;@$cmdpage&apos; 16 ? 
 			(nothing)" />
@@ -108,7 +108,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 15 ? 
-			(toggle &apos;@$quantized1&apos;)
+			(deck 1 toggle &apos;@quantize&apos; )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 16 ? 
 			()
@@ -324,7 +324,7 @@
 			(set &apos;@$cmdpage&apos; 6 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(toggle &apos;@$syncbuttond1&apos; &amp;  (var &apos;@$pitchlockd1&apos; ? deck 1 beatlock) &amp; (var  &apos;@$syncbuttond1&apos; &amp;&amp; var &apos;@$quantized1&apos; ? deck 1 sync))
+			(deck 1 toggle &apos;@syncbtn&apos; &amp;  (deck 1 var &apos;@pitchlck&apos; ? deck 1 beatlock) &amp; (deck 1 var &apos;@syncbtn&apos; &amp;&amp; deck 1 var &apos;@quantize&apos; ? deck 1 sync))
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			(deck 1 slicer 6 hold)
@@ -348,7 +348,7 @@
 			()
 			: nothing &amp;
 		 var &apos;@$cmdpage&apos; 9 ? 
-			() &amp; (var&apos;@$syncbuttond1&apos; &amp;&amp; var &apos;@$quantized1&apos; ? deck 1 sync)) 
+			() &amp; (deck 1 var &apos;@syncbtn&apos; &amp;&amp; deck 1 var &apos;@quantize&apos; ? deck 1 sync)) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
 			()
@@ -472,13 +472,13 @@
 		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_I" action="
 		var &apos;@$cmdpage&apos; 0 ? 
-			(set &apos;@$cmdpage&apos; 9 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
+			(set &apos;@$cmdpage&apos; 15 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 cue)
+			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 1 hold)
+			(deck 3 slicer 7 hold)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 3 ? 
 			()
@@ -487,7 +487,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 1)
+			(deck 3 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
 			()
@@ -517,7 +517,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 15 ? 
-			()
+			(deck 3 toggle &apos;@pitchlck&apos; )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_J" action="
@@ -567,7 +567,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 15 ? 
-			()
+			(deck 3 toggle &apos;@quantize&apos; )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_K" action="
@@ -725,7 +725,7 @@
 			(set &apos;@$cmdpage&apos; 14 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 3 toggle &apos;@syncbtn&apos; &amp;  (deck 3 var &apos;@pitchlck&apos; ? deck 3 beatlock) &amp; (deck 3 var &apos;@syncbtn&apos; &amp;&amp; deck 3 var &apos;@quantize&apos; ? deck 3 sync))
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			(deck 3 slicer 6 hold)
@@ -1725,7 +1725,7 @@
 		: var &apos;@$cmdpage&apos; 14 ? 
 			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			(var &apos;@$pitchlockd1&apos; ? color green : nothing)
+			(deck 1 var &apos;@pitchlck&apos; ? color green )
 		: var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="LED_2XK2_BUTTON_B" action="
 		var &apos;@$cmdpage&apos; 0 ? 
@@ -1761,7 +1761,7 @@
 		: var &apos;@$cmdpage&apos; 14 ? 
 			(
 		: var &apos;@$cmdpage&apos; 15 ? 
-			(var &apos;@$quantized1&apos; ? color green : nothing
+			(deck 1 var &apos;@quantize&apos; ? color green)
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_C" action="
@@ -1885,7 +1885,7 @@
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 beatlock &amp;&amp; var &apos;@$quantized1&apos; ? (var &apos;@$syncbuttond1&apos; ? color green : color red ) : (var &apos;@$syncbuttond1&apos; ? color red : nothing))
+			(deck 1 beatlock &amp;&amp; deck 1 var &apos;@quantize&apos; ? (deck 1 var &apos;@syncbtn&apos; ? color green : color red ) : (deck 1 var &apos;@syncbtn&apos; ? color red : nothing))
 		: var &apos;@$cmdpage&apos; 2 ? 
 			(deck 1 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
@@ -2016,7 +2016,7 @@
 		: var &apos;@$cmdpage&apos; 14 ? 
 			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			()
+			(deck 3 var &apos;@pitchlck&apos; ? color green )
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_J" action="
@@ -2051,7 +2051,7 @@
 		: var &apos;@$cmdpage&apos; 14 ? 
 			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			()
+			(deck 3 var &apos;@quantize&apos; ? color green)
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_K" action="
@@ -2163,7 +2163,7 @@
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 3 beatlock &amp;&amp; deck 3 var &apos;@quantize&apos; ? (deck 3 var &apos;@syncbtn&apos; ? color green : color red ) : (deck 3 var &apos;@syncbtn&apos; ? color red : nothing))
 		: var &apos;@$cmdpage&apos; 2 ? 
 			(deck 3 slicer 1 ? color red)
 		: var &apos;@$cmdpage&apos; 3 ? 
