@@ -12,554 +12,814 @@
 	<map value="2XK2_BUTTON_A" action="
   		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 1 &amp; 
-			 set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pioneer_cue) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 1 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 1) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			(toggle &apos;@$pitchlockd1&apos;) 
+			set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 1 pioneer_cue)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 1 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			(nothing)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 1)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			(nothing)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			(toggle &apos;@$pitchlockd1&apos;)
+			: nothing &amp;
 		: var &apos;@$cmdpage&apos; 16 ? 
 			(nothing)" />
 	<map value="2XK2_BUTTON_B" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 2 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-				(deck 1 masterdeck) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-				(deck 1 slicer 2 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-				(deck 1 hot_cue 2) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-				() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-				(toggle &apos;@$quantized1&apos;) 
-		: var &apos;@$cmdpage&apos; 16 ? 
-				()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 1 masterdeck)
+			 : nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 2 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 2)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			(toggle &apos;@$quantized1&apos;)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? 
+			()
+			: nothing " />
 	<map value="2XK2_BUTTON_C" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 3 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pitch_bend -3%) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 3 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 3) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			: nothing
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 1 pitch_bend -3%)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 3 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 3)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
 		: var &apos;@$cmdpage&apos; 15 ? 
-			(toggle &apos;@$keysync d1&apos;) 
+			(toggle &apos;@$keysyncd1&apos;) 
+			: nothing &amp;
 		: var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_D" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 4 &amp; 
 			 set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pitch_bend +3%) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 4 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 4) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 1 pitch_bend +3%)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 4 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 4)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()
 		" />
 	<map value="2XK2_BUTTON_E" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 5 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;)
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pioneer_play) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 5 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 5) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 1 pioneer_play)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 5 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 5)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
 		: var &apos;@$cmdpage&apos; 16 ? 
-			()" />
+			()
+			: nothing &amp;
+			" />
 	<map value="2XK2_BUTTON_F" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 6 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(toggle &apos;@$syncbuttond1&apos; &amp;  (var &apos;@$pitchlockd1&apos; ? deck 1 beatlock) &amp; (var  &apos;@$syncbuttond1&apos; &amp;&amp; var &apos;@$quantized1&apos; ? deck 1 sync)) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 6 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 6) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		:  var &apos;@$cmdpage&apos; 9 ? 
-			() &amp; (var&apos;@$syncbuttond1&apos; &amp;&amp; var &apos;@$quantized1&apos; ? deck 1 sync))  
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(toggle &apos;@$syncbuttond1&apos; &amp;  (var &apos;@$pitchlockd1&apos; ? deck 1 beatlock) &amp; (var  &apos;@$syncbuttond1&apos; &amp;&amp; var &apos;@$quantized1&apos; ? deck 1 sync))
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 6 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 6)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		 var &apos;@$cmdpage&apos; 9 ? 
+			() &amp; (var&apos;@$syncbuttond1&apos; &amp;&amp; var &apos;@$quantized1&apos; ? deck 1 sync)) 
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_G" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 7 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 7 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 7) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 7 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 7)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? 
+			()" />
 	<map value="2XK2_BUTTON_H" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 8 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 8 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 hot_cue 8) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			(deck 1 phrase_sync) 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 8 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 hot_cue 8)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			(deck 1 phrase_sync)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_I" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 9 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 pioneer_cue) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 1 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 1) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 3 pioneer_cue)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 1 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 1)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_J" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 10 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(masterdeck) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 2 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 2) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(masterdeck)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 2 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 2)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_K" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 11 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 pitch_bend -3%) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 3 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 3) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 3 pitch_bend -3%)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 3 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 3)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_L" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 12 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 pitch_bend +3%) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 4 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 4) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 3 pitch_bend +3%)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 4 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 4)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_M" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 13 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 5 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 5) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 5 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 5)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_N" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 14 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 6 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 6) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 6 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 6)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_O" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 15 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 7 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 7) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 7 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 7)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_BUTTON_P" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(set &apos;@$cmdpage&apos; 16 &amp; set &apos;@$currpage&apos; &apos;@$cmdpage&apos;) 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 3 pioneer_play) 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 3 slicer 8 hold) 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 hot_cue 8) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			(deck 3 pioneer_play)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			(deck 3 slicer 8 hold)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 hot_cue 8)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="2XK2_ENCODER_PUSH_INNER" action="loop " />
 	<map value="K22D_ENCODER_PUSH_OUTER" action="toggle &apos;longjump&apos;" />
 	<map value="2XK2_ENCODER_INNER" action="var &apos;@$cmdpage&apos; 1 ? loop_double" />
@@ -572,547 +832,803 @@
 	<map value="SHIFT_2XK2_BUTTON_A" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 1) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 1)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_B" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 2) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 2)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_C" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 3) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 3)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_D" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 4) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 4)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_E " action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 5) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 5)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_F" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 6) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 6)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_G" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 7) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 7)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_H" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 8) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 1 delete_cue 8)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_I" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 1) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 1)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_J" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 2) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 2)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_K" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 3) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 3)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_L" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 4) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 4)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_M" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 5) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 5)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_N" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 6) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 6)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_O" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 7) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 7)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="SHIFT_2XK2_BUTTON_P" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			() 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 8) 
-		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 16 ? ()" />
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 1 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 2 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 3 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 4 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 5 ? 
+			(deck 3 delete_cue 8)
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 6 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 7 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 8 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 9 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 10 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 11 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 12 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 13 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 14 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 15 ? 
+			()
+			: nothing &amp;
+		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="LED_K22D_MODE" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			color red 
@@ -1131,35 +1647,35 @@
 				(blink ? color green : nothing)
 				: color green) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pioneer_cue ? color orange) 
+			(deck 1 pioneer_cue ? color orange )
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 1 hold) 
+			(deck 1 slicer 1 hold)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			(var &apos;@$pitchlockd1&apos; ? color green : nothing) 
+			(var &apos;@$pitchlockd1&apos; ? color green : nothing)
 		: var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="LED_2XK2_BUTTON_B" action="
 		var &apos;@$cmdpage&apos; 0 ? 
@@ -1167,41 +1683,41 @@
 				(blink ? color red : nothing) 
 				: color red ) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 master_tempo &amp;&amp; deck 1 masterdeck ? (blink ? color red : color orange) : deck 1 masterdeck ? color red :  deck 1 master_tempo ? color orange : nothing) 
+			(deck 1 master_tempo &amp;&amp; deck 1 masterdeck ? (blink ? color red : color orange) : deck 1 masterdeck ? color red :  deck 1 master_tempo ? color orange : nothing
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 2 hold) 
+			(deck 1 slicer 2 hold
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 5 ? 
-			((deck 1 slicer 1 hold) 
+			((deck 1 slicer 1 hold
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			(
 		: var &apos;@$cmdpage&apos; 15 ? 
-			(var &apos;@$quantized1&apos; ? color green : nothing) 
+			(var &apos;@$quantized1&apos; ? color green : nothing
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_C" action="
@@ -1210,38 +1726,38 @@
 				(blink ? 
 					color green) 
 				: color green) 
-			: var &apos;@$cmdpage&apos; 1 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 2 ? 
-				(deck 1 slicer 3 hold) 
-			: var &apos;@$cmdpage&apos; 3 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 4 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 5 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 6 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 7 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 8 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 9 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 10 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 11 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 12 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 13 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 14 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 15 ? 
-				() 
-			: var &apos;@$cmdpage&apos; 16 ? 
-				()" />
+		: var &apos;@$cmdpage&apos; 1 ? 
+			()
+		: var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 3 hold)
+		: var &apos;@$cmdpage&apos; 3 ? 
+			()
+		: var &apos;@$cmdpage&apos; 4 ? 
+			()
+		: var &apos;@$cmdpage&apos; 5 ? 
+			()
+		: var &apos;@$cmdpage&apos; 6 ? 
+			()
+		: var &apos;@$cmdpage&apos; 7 ? 
+			()
+		: var &apos;@$cmdpage&apos; 8 ? 
+			()
+		: var &apos;@$cmdpage&apos; 9 ? 
+			()
+		: var &apos;@$cmdpage&apos; 10 ? 
+			()
+		: var &apos;@$cmdpage&apos; 11 ? 
+			()
+		: var &apos;@$cmdpage&apos; 12 ? 
+			()
+		: var &apos;@$cmdpage&apos; 13 ? 
+			()
+		: var &apos;@$cmdpage&apos; 14 ? 
+			()
+		: var &apos;@$cmdpage&apos; 15 ? 
+			()
+		: var &apos;@$cmdpage&apos; 16 ? 
+			()" />
 	<map value="LED_2XK2_BUTTON_D" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(var &apos;@$currpage&apos; 4 ? 
@@ -1249,993 +1765,1021 @@
 					color orange) 
 			: color orange) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 4 hold) 
+			(deck 1 slicer 4 hold)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_E" action="
-		var &apos;@$cmdpage&apos; 0 ? (var &apos;@$currpage&apos; 5 ? (blink ? color orange) :color orange) 
+		var &apos;@$cmdpage&apos; 0 ? 
+			(var &apos;@$currpage&apos; 5 ? (blink ? color orange) :color orange) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			(deck 1 pioneer_play ? color green) 
+			(deck 1 pioneer_play ? color green)
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 5 hold) 
+			(deck 1 slicer 5 hold)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			((deck 1 slicer 1 hold) 
+			(deck 1 slicer 1 hold)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1  cue_color 5 green ? color green :  (deck 1  cue_color 5 orange ? color orange : (deck 1 cue_color 5 red ? color red :  (deck 1 cue_color 5 purple ? color red  :  (deck 1 hot_cute 5 ? (blink ? color red : nothing) : nothing) : nothing ) : nothing ) : nothing ) : nothing ) :) 
+			(deck 1  cue_color 5 green ? color green :  (deck 1  cue_color 5 orange ? color orange : (deck 1 cue_color 5 red ? color red :  (deck 1 cue_color 5 purple ? color red  :  (deck 1 hot_cute 5 ? (blink ? color red : nothing) : nothing) : nothing ) : nothing ) : nothing ) : nothing ) :)
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_F" action="
-	var &apos;@$cmdpage&apos; 0 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 1 ? 
-		(deck 1 beatlock &amp;&amp; var &apos;@$quantized1&apos; ? (var &apos;@$syncbuttond1&apos; ? color green : color red ) : (var &apos;@$syncbuttond1&apos; ? color red : nothing)) 
-	: var &apos;@$cmdpage&apos; 2 ? 
-		(deck 1 slicer 6 hold) 
-	: var &apos;@$cmdpage&apos; 3 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 4 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 5 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 6 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 7 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 8 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 9 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 10 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 11 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 12 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 13 ?() 
-	: var &apos;@$cmdpage&apos; 14 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 15 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 16 ? ()" />
-	<map value="LED_2XK2_BUTTON_G" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			(deck 1 beatlock &amp;&amp; var &apos;@$quantized1&apos; ? (var &apos;@$syncbuttond1&apos; ? color green : color red ) : (var &apos;@$syncbuttond1&apos; ? color red : nothing))
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 7 hold) 
+			(deck 1 slicer 6 hold)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
-		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
+		: var &apos;@$cmdpage&apos; 13 ?
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
+			()
+		: var &apos;@$cmdpage&apos; 16 ? ()" />
+	<map value="LED_2XK2_BUTTON_G" action="
+		var &apos;@$cmdpage&apos; 0 ? 
 			() 
+		: var &apos;@$cmdpage&apos; 1 ? 
+			()
+		: var &apos;@$cmdpage&apos; 2 ? 
+			(deck 1 slicer 7 hold)
+		: var &apos;@$cmdpage&apos; 3 ? 
+			()
+		: var &apos;@$cmdpage&apos; 4 ? 
+			()
+		: var &apos;@$cmdpage&apos; 5 ? 
+			()
+		: var &apos;@$cmdpage&apos; 6 ? 
+			()
+		: var &apos;@$cmdpage&apos; 7 ? 
+			()
+		: var &apos;@$cmdpage&apos; 8 ? 
+			()
+		: var &apos;@$cmdpage&apos; 9 ? 
+			()
+		: var &apos;@$cmdpage&apos; 10 ? 
+			()
+		: var &apos;@$cmdpage&apos; 11 ? 
+			()
+		: var &apos;@$cmdpage&apos; 12 ? 
+			()
+		: var &apos;@$cmdpage&apos; 13 ? 
+			()
+		: var &apos;@$cmdpage&apos; 14 ? 
+			()
+		: var &apos;@$cmdpage&apos; 15 ? 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_H" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		var &apos;@$cmdpage&apos; 0 ?
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			(deck 1 slicer 8 hold) 
+			(deck 1 slicer 8 hold)
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_I" action="
-	var &apos;@$cmdpage&apos; 0 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 1 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 2 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 3 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 4 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 5 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 6 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 7 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 8 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 9 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 10 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 11 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 12 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 13 ?
-		() 
-	: var &apos;@$cmdpage&apos; 14 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 15 ? 
-		() 
-	: var &apos;@$cmdpage&apos; 16 ? 
-		()" />
+		var &apos;@$cmdpage&apos; 0 ? 
+			() 
+		: var &apos;@$cmdpage&apos; 1 ? 
+			()
+		: var &apos;@$cmdpage&apos; 2 ? 
+			()
+		: var &apos;@$cmdpage&apos; 3 ? 
+			()
+		: var &apos;@$cmdpage&apos; 4 ? 
+			()
+		: var &apos;@$cmdpage&apos; 5 ? 
+			()
+		: var &apos;@$cmdpage&apos; 6 ? 
+			()
+		: var &apos;@$cmdpage&apos; 7 ? 
+			()
+		: var &apos;@$cmdpage&apos; 8 ? 
+			()
+		: var &apos;@$cmdpage&apos; 9 ? 
+			()
+		: var &apos;@$cmdpage&apos; 10 ? 
+			()
+		: var &apos;@$cmdpage&apos; 11 ? 
+			()
+		: var &apos;@$cmdpage&apos; 12 ? 
+			()
+		: var &apos;@$cmdpage&apos; 13 ?
+			()
+		: var &apos;@$cmdpage&apos; 14 ? 
+			()
+		: var &apos;@$cmdpage&apos; 15 ? 
+			()
+		: var &apos;@$cmdpage&apos; 16 ? 
+			()" />
 	<map value="LED_2XK2_BUTTON_J" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		var &apos;@$cmdpage&apos; 0 ?
+			() 
+		: var &apos;@$cmdpage&apos; 1 ? 
+			()
+		: var &apos;@$cmdpage&apos; 2 ? 
+			()
+		: var &apos;@$cmdpage&apos; 3 ? 
+			()
+		: var &apos;@$cmdpage&apos; 4 ? 
+			()
+		: var &apos;@$cmdpage&apos; 5 ? 
+			()
+		: var &apos;@$cmdpage&apos; 6 ? 
+			()
+		: var &apos;@$cmdpage&apos; 7 ? 
+			()
+		: var &apos;@$cmdpage&apos; 8 ? 
+			()
+		: var &apos;@$cmdpage&apos; 9 ? 
+			()
+		: var &apos;@$cmdpage&apos; 10 ? 
+			()
+		: var &apos;@$cmdpage&apos; 11 ? 
+			()
+		: var &apos;@$cmdpage&apos; 12 ? 
+			()
+		: var &apos;@$cmdpage&apos; 13 ? 
+			()
+		: var &apos;@$cmdpage&apos; 14 ? 
+			()
+		: var &apos;@$cmdpage&apos; 15 ? 
+			()
+		: var &apos;@$cmdpage&apos; 16 ? 
+			()" />
+	<map value="LED_2XK2_BUTTON_K" action="
+		var &apos;@$cmdpage&apos; 0 ? 
+			()  
 		: var &apos;@$cmdpage&apos; 1 ? 
 			() 
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
-	<map value="LED_2XK2_BUTTON_K" action="var &apos;@$cmdpage&apos; 0 ? () : 
-
-var &apos;@$cmdpage&apos; 1 ? 
-	() 
-: var &apos;@$cmdpage&apos; 2 ? 
-	() 
-: var &apos;@$cmdpage&apos; 3 ? 
-	() 
-: var &apos;@$cmdpage&apos; 4 ? 
-	() 
-: var &apos;@$cmdpage&apos; 5 ? 
-	() 
-: var &apos;@$cmdpage&apos; 6 ? 
-	() 
-: var &apos;@$cmdpage&apos; 7 ? 
-	() 
-: var &apos;@$cmdpage&apos; 8 ? 
-	() 
-: var &apos;@$cmdpage&apos; 9 ? 
-	() 
-: var &apos;@$cmdpage&apos; 10 ? 
-	() 
-: var &apos;@$cmdpage&apos; 11 ? 
-	() 
-: var &apos;@$cmdpage&apos; 12 ? 
-	() 
-: var &apos;@$cmdpage&apos; 13 ? 
-	() 
-: var &apos;@$cmdpage&apos; 14 ? 
-	() 
-: var &apos;@$cmdpage&apos; 15 ? 
-	() 
-: var &apos;@$cmdpage&apos; 16 ? 
-	()" />
 	<map value="LED_2XK2_BUTTON_L" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
-	<map value="LED_2XK2_BUTTON_M" action="var &apos;@$cmdpage&apos; 0 ? () : 
-
-var &apos;@$cmdpage&apos; 1 ? 
-	() 
-: var &apos;@$cmdpage&apos; 2 ? 
-	() 
-: var &apos;@$cmdpage&apos; 3 ? 
-	() 
-: var &apos;@$cmdpage&apos; 4 ? 
-	() 
-: var &apos;@$cmdpage&apos; 5 ? 
-	() 
-: var &apos;@$cmdpage&apos; 6 ? 
-	() 
-: var &apos;@$cmdpage&apos; 7 ? 
-	() 
-: var &apos;@$cmdpage&apos; 8 ? 
-	() 
-: var &apos;@$cmdpage&apos; 9 ? 
-	() 
-: var &apos;@$cmdpage&apos; 10 ? 
-	() 
-: var &apos;@$cmdpage&apos; 11 ? 
-	() 
-: var &apos;@$cmdpage&apos; 12 ? 
-	() 
-: var &apos;@$cmdpage&apos; 13 ? 
-	() 
-: var &apos;@$cmdpage&apos; 14 ? 
-	() 
-: var &apos;@$cmdpage&apos; 15 ? 
-	() 
-: var &apos;@$cmdpage&apos; 16 ? 
-	()" />
-	<map value="LED_2XK2_BUTTON_N" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+	<map value="LED_2XK2_BUTTON_M" action="
+		var &apos;@$cmdpage&apos; 0 ? 
+			()
 		: var &apos;@$cmdpage&apos; 1 ? 
 			() 
+	
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
+			()
+		: var &apos;@$cmdpage&apos; 16 ? 
+			()" />
+	<map value="LED_2XK2_BUTTON_N" action="
+		var &apos;@$cmdpage&apos; 0 ? 
 			() 
+		: var &apos;@$cmdpage&apos; 1 ? 
+			()
+		: var &apos;@$cmdpage&apos; 2 ? 
+			()
+		: var &apos;@$cmdpage&apos; 3 ? 
+			()
+		: var &apos;@$cmdpage&apos; 4 ? 
+			()
+		: var &apos;@$cmdpage&apos; 5 ? 
+			()
+		: var &apos;@$cmdpage&apos; 6 ? 
+			()
+		: var &apos;@$cmdpage&apos; 7 ? 
+			()
+		: var &apos;@$cmdpage&apos; 8 ? 
+			()
+		: var &apos;@$cmdpage&apos; 9 ? 
+			()
+		: var &apos;@$cmdpage&apos; 10 ? 
+			()
+		: var &apos;@$cmdpage&apos; 11 ? 
+			()
+		: var &apos;@$cmdpage&apos; 12 ? 
+			()
+		: var &apos;@$cmdpage&apos; 13 ? 
+			()
+		: var &apos;@$cmdpage&apos; 14 ? 
+			()
+		: var &apos;@$cmdpage&apos; 15 ? 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_O" action="var &apos;@$cmdpage&apos; 0 ? (
-		var &apos;@$currpage&apos; 15 ? (blink ? color red : nothing) : color red) 
+		var &apos;@$currpage&apos; 15 ?
+			(blink ? color red : nothing) : color red) 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="LED_2XK2_BUTTON_P" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ?
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_A" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 1 ? (blink ? color red))
+			(deck 1 delete_cue 1 ? (blink ? color red)
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_B" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 2 ? (blink ? color red)) 
+			(deck 1 delete_cue 2 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_C" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 3 ? (blink ? color red)) 
+			(deck 1 delete_cue 3 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_D" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 4 ? (blink ? color red)) 
+			(deck 1 delete_cue 4 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_E " action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 5 ? (blink ? color red)) 
+			(deck 1 delete_cue 5 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_F" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 6 ? (blink ? color red)) 
+			(deck 1 delete_cue 6 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_G" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 7 ? (blink ? color red)) 
+			(deck 1 delete_cue 7 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_H" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 1 delete_cue 8 ? (blink ? color red)) 
+			(deck 1 delete_cue 8 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_I" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 1 ? (blink ? color red)) 
+			(deck 3 delete_cue 1 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_J" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 2 ? (blink ? color red)) 
+			(deck 3 delete_cue 2 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_K" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 3 ? (blink ? color red)) 
+			(deck 3 delete_cue 3 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_L" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 4 ? (blink ? color red)) 
+			(deck 3 delete_cue 4 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_M" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 5 ? (blink ? color red)) 
+			(deck 3 delete_cue 5 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_N" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 6 ? (blink ? color red)) 
+			(deck 3 delete_cue 6 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_O" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 7 ? (blink ? color red)) 
+			(deck 3 delete_cue 7 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_LED_2XK2_BUTTON_P" action="
-		var &apos;@$cmdpage&apos; 0 ? () 
+		: var &apos;@$cmdpage&apos; 0 ? 
+			() 
 		: var &apos;@$cmdpage&apos; 1 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 2 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 3 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 4 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 5 ? 
-			(deck 3 delete_cue 8 ? (blink ? color red)) 
+			(deck 3 delete_cue 8 ? (blink ? color red))
 		: var &apos;@$cmdpage&apos; 6 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 7 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 8 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 9 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 10 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 11 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 12 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 13 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 14 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 15 ? 
-			() 
+			()
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_K2L_2XK2_ENC_BTM_L_PUSH" action="add_favoritefolder" />
