@@ -1679,15 +1679,6 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 16 ? ()" />
-	<map value="LED_K22D_MODE" action="
-		var &apos;@$cmdpage&apos; 0 ? 
-			color red 
-		: var &apos;@$cmdpage&apos; 1 ? 
-			color green 
-		: var &apos;@$cmdpage &apos;9 ? 
-			color red 
-		: var &apos;@$cmdpage&apos;3 ? 
-			color orange" />
 	<map value="LED_SHIFT" action="shift ? color red" />
 	<map value="LED_2XK2_ENCODER_INNER" action="loop ? color green" />
 	<map value="LED_2XK2_ENCODER_OUTER" action="var &apos;longjump&apos; 1 ? color green : color red" />
@@ -2825,4 +2816,13 @@
 		: var &apos;@$cmdpage&apos; 16 ? 
 			()" />
 	<map value="SHIFT_K2L_2XK2_ENC_BTM_L_PUSH" action="add_favoritefolder" />
+	<map value="LED_K2R_2XK2_MODE" action="
+		var &apos;@$cmdpage&apos; 0 ? 
+			color red 
+		: var &apos;@$cmdpage&apos; 1 ? 
+			color green 
+		: var &apos;@$cmdpage &apos;9 ? 
+			color red 
+		: var &apos;@$cmdpage&apos;3 ? 
+			color orange" />
 </mapper>
