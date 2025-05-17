@@ -24,7 +24,7 @@ HRESULT VDJ_API CMyPlugin8::OnLoad()
 HRESULT VDJ_API CMyPlugin8::OnGetPluginInfo(TVdjPluginInfo8 *infos)
 {
 	infos->PluginName = "MyPlugin8";
-	infos->Author = "Atomix Productions";
+	infos->Author = "musicvivireal";
 	infos->Description = "My first VirtualDJ 8 plugin";
 	infos->Version = "1.0";
 	infos->Flags = 0x00;
