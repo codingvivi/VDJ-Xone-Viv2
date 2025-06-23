@@ -870,9 +870,9 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 16 ? ()" />
-	<map value="2XK2_ENCODER_PUSH_INNER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? deck 2 loop : deck 4 toggle &apos;longjump&apos;" />
-	<map value="2XK2_ENCODER_INNER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 4 ? ((deck 4 var &apos;longjump&apos; 1 ? deck 4 beatjump_select 32 : deck 4 beatjump_select 8) &amp; deck 4 beatjump) : (deck 2 loop_double)" />
-	<map value="2XK2_ENCODER_OUTER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? ((deck 2 var &apos;longjump&apos; 1 ? deck 2 beatjump_select 32 : deck 2 beatjump_select 8) &amp; deck 2 beatjump) : (deck 4 loop_double)" />
+	<map value="2XK2_ENCODER_PUSH_INNER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? deck 2 loop : toggle &apos;@$longjump&apos;" />
+	<map value="2XK2_ENCODER_INNER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 4 ? ((var &apos;@$longjump&apos; 1 ? deck 4 beatjump_select 32 : deck 4 beatjump_select 8) &amp; deck 4 beatjump) : (deck 2 loop_double)" />
+	<map value="2XK2_ENCODER_OUTER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? ((var &apos;@$longjump&apos; 1 ? deck 2 beatjump_select 32 : deck 2 beatjump_select 8) &amp; deck 2 beatjump) : (deck 4 loop_double)" />
 	<map value="SHIFT_K2_BUTTON_G" action="master_tempo " />
 	<map value="SHIFT" action="shift" />
 	<map value="SHIFT_2XK2_ENCODER_INNER" action="loop ? loop_move " />
@@ -1033,7 +1033,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 2 load)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1433,7 +1433,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 4 load)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1679,8 +1679,8 @@
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 16 ? ()" />
 	<map value="LED_SHIFT" action="shift ? color red" />
-	<map value="LED_2XK2_ENCODER_INNER" action="var &apos;@$cmdpage&apos; 1 ? ( action_deck 2 ? ( deck 2 loop ? color green ) : ( deck 4 var &apos;longjump&apos; 1 ? color green : color red )" />
-	<map value="LED_2XK2_ENCODER_OUTER" action="var &apos;@$cmdpage&apos; 1 ? ( action_deck 4 ? ( deck 4 loop ? color green ) : ( deck 2 var &apos;longjump&apos; 1 ? color green : color red )" />
+	<map value="LED_2XK2_ENCODER_INNER" action="var &apos;@$cmdpage&apos; 1 ? ( action_deck 2 ? ( deck 2 loop ? color green ) : (var &apos;@$longjump&apos; 1 ? color green : color red )" />
+	<map value="LED_2XK2_ENCODER_OUTER" action="var &apos;@$cmdpage&apos; 1 ? ( action_deck 4 ? ( deck 4 loop ? color green ) : (var &apos;@$longjump&apos; 1 ? color green : color red )" />
 	<map value="LED_2XK2_BUTTON_A" action="
 		var &apos;@$cmdpage&apos; 0 ? 
 			(var &apos;@$currpage&apos; 1 ? 
@@ -2824,5 +2824,5 @@
 			color red 
 		: var &apos;@$cmdpage&apos;3 ? 
 			color orange" />
-	<map value="2XK2_ENCODER_PUSH_OUTER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? deck 2 toggle &apos;longjump&apos; : deck 4 loop" />
+	<map value="2XK2_ENCODER_PUSH_OUTER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? toggle &apos;@$longjump&apos; : deck 4 loop" />
 </mapper>
