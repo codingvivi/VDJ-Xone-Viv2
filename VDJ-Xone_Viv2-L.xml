@@ -1031,7 +1031,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 1 ? 
-			(deck 1 load)
+			(browser_window &apos;songs&apos; ? deck 1 load : browser_window &apos;sideview&apos; ? deck 1 sidelist_load_and_remove)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 2 ? 
 			()
@@ -1431,7 +1431,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 1 ? 
-			(deck 3 load)
+			(browser_window &apos;songs&apos; ? deck 3 load : browser_window &apos;sideview&apos; ? deck 3 sidelist_load_and_remove)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 2 ? 
 			()
@@ -2826,5 +2826,6 @@
 	<map value="2XK2_ENCODER_INNER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 1 ? ((var &apos;@$longjump&apos; 1 ? deck 3 beatjump_select 32 : deck 3 beatjump_select 8) &amp; deck 3 beatjump) : (deck 1 loop_double)" />
 	<map value="2XK2_ENCODER_PUSH_OUTER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 3 ? toggle &apos;@$longjump&apos; : deck 3 loop" />
 	<map value="K2L_2XK2_ENC_BTM_L_PUSH" action="browser_open_folder" />
-	<map value="K22D_ENC_BTM_R_PUSH" action="browser_zoom" />
+	<map value="K2L_2XK2_ENC_BTM_R_PUSH" action="sidelist_add" />
+	<map value="SHIFT_K2L_2XK2_ENC_BTM_R" action="param_multiply 0.5% &amp; param_cast &amp; deck master pitch" />
 </mapper>

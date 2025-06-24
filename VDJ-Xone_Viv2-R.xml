@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mapper device="XONEK2" author="musicvivireal" version="850" date="2025-06-23">
+<mapper device="XONEK2" author="musicvivireal" version="850" date="2025-06-24">
 	<info>https://www.virtualdj.com/manuals/hardware/allenheath/k2.html</info>
 	<map value="ONINIT" action="set &apos;longjump&apos; 1 &amp; set_var &apos;$tests&apos; 2 &amp;  set_var &apos;$testing&apos; &quot;Key Difference  &lt;= `get_var &apos;tests&apos; `&quot; &amp;  set_var &apos;$numread&apos; &quot;param_add &apos;get_loaded_song track &amp; param_cast int&apos;&quot; &amp; set_var &apos;$field_energy &quot;Track&quot; &apos; &amp; set_var &apos;$field_energy_pos&apos; &quot;Track&quot; &amp; set_var &apos;$energy_pos_am&apos; 1 &amp; set_var $energy_pos_status 0 &amp; set_var $energy_neg_status 0 &amp;  set_var &apos;$energy_neg_am_cycle&apos; 1  &amp; ( deck master repeat_start filterUpdate ? on : off ) &amp; set $storeBPM `deck master get_bpm &amp; param_cast int_trunc` &amp; set $storekey `deck master get_key` &amp; deck master repeat_start filterUpdate ? repeat_stop filterUpdate : repeat_start filterUpdate 1000ms &amp; set $changed 0 &amp; quick_filter !? set $filter01 0 &amp; set $filter02 0 &amp; set $filter03 0 : ( quick_filter 1 ? set $filter01 1 : set $filter01 0 ) &amp; ( quick_filter 2 ? set $filter02 1 : set $filter02 0 ) &amp; ( quick_filter 3 ? set $filter03 1 : set $filter03 0 ) &amp; ( quick_filter 1 ? param_equal `deck master get_bpm &amp; param_cast int_trunc` `get_var $storeBPM` ? : set $changed 1 &amp; set $storeBPM `deck master get_bpm &amp; param_cast int_trunc` : ) &amp; ( quick_filter 2 ? param_equal `deck master get_key` `get_var $storekey` ? : set $changed 1 &amp; set $storekey `deck master get_key` : ) &amp; var $changed 1 ? quick_filter off &amp; ( var $filter01 ? quick_filter 1 : ) &amp; ( var $filter02 ? quick_filter 2 : ) &amp; ( var $filter03 ? quick_filter 3 : )" />
 	<map value="K2R_2XK2_MODE" action="set &apos;@$cmdpage&apos; 0" />
 	<map value="K2L_2XK2_ENC_BTM_L" action="browser_window folders &amp; browser_scroll" />
 	<map value="K2L_2XK2_ENC_BTM_R" action="browser_window songs &amp; browser_scroll " />
-	<map value="K2R_2XK2_ENC_BTM_L" action="sideview" />
-	<map value="K2R_2XK2_ENC_BTM_R" action="browser_window sideview &amp; browser_scroll" />
-	<map value="K2R_2XK2_ENC_BTM_R_PUSH" action="sidelist_add" />
+	<map value="K2R_2XK2_ENC_BTM_L" action="browser_window sideview &amp; browser_scroll" />
 	<map value="K2R_2XK2_ENC_BTM_L_PUSH" action="down ? set_var &apos;$load_side&apos; 1 : set_var &apos;$load_side&apos; 0" />
 	<map value="2XK2_BUTTON_A" action="
   		var &apos;@$cmdpage&apos; 0 ? 
@@ -2825,4 +2823,9 @@
 		: var &apos;@$cmdpage&apos;3 ? 
 			color orange" />
 	<map value="2XK2_ENCODER_PUSH_OUTER" action="var &apos;@$cmdpage&apos; 1 ? action_deck 2 ? toggle &apos;@$longjump&apos; : deck 4 loop" />
+	<map value="SHIFT_K2R_2XK2_ENC_BTM_L" action="sideview " />
+	<map value="K2R_2XK2_ENC_BTM_R_PUSH" action="browser_zoom" />
+	<map value="SHIFT_K2R_2XK2_ENC_BTM_R" action="font_size" />
+	<map value="K2R_2XK2_ENC_BTM_R" action="param_multiply 2 &amp;param_cast percentage &amp; zoom" />
+	<map value="SHIFT_K2R_2XK2_ENC_BTM_L_PUSH" action="sidelist_clear" />
 </mapper>
