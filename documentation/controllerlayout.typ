@@ -127,7 +127,7 @@
     [\ _deck #deck _]
   }
 }
-
+#let dg = target("g")
 #let d1 = target("1")
 #let d2 = target("2")
 #let d3 = target("3")
@@ -142,12 +142,14 @@
   unmappedmiddle.push(unmapped)
 }
 
+// ---- Left controller ----
+// Normal
 #let lsharedtopcmds = arguments(
 
   [Normal],
 
-  [jump length \ _global_], [set loop \ _deck 1_], unmapped, [set loop \ _deck 3_],
-  [long jump \ _deck 1_], [loop length \ _deck 1_], unmapped, [loop length \ _deck 3_],
+  [jump length] + dg, [set loop], unmapped, [set loop] + d3,
+  [long jump] + d1, [loop length] + d1, [long jump], [loop length] + d3,
 
   ..unmappedmiddle, 
 )
@@ -157,24 +159,14 @@
     [add folder to favorites], [add to sidelist],
     unmapped, [scroll folders], [scroll songs], [shift]
 )
-
+// Shift
 #let lsharedtopcmdsshift = arguments(
   [Shift],
 
-  [jump length \ _global_], [set loop \ _deck 1_], unmapped, [set loop \ _deck 3_],
-  [long jump \ _deck 1_], [loop length \ _deck 1_], unmapped, [loop length \ _deck 3_],
+  unmapped, same + [\ \ ], unmapped, same + [\ \ ],
+  [short jump] + d1, [move loop] + d1, [short jump] + d3, [move loop] +d3,
 
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-  
-
-  unmapped, unmapped, unmapped, unmapped,
+  ..unmappedmiddle,
 )
 
 #let lsharedbottomcmdsshift = arguments(
@@ -183,54 +175,83 @@
 )
 
 
-
+// ---- Right controller ----
+// Normal
 #let rsharedtopcmds = arguments(
 
   [Normal],
 
-  [jump length \ _global_], [set loop \ _deck 2_], unmapped, [set loop \ _deck 4_],
-  [long jump \ _deck 2_], [loop length \ _deck 2_], unmapped, [loop length \ _deck 4_],
+  unmapped, [set loop] + d2, unmapped, [set loop] + d4,
+  [long jump] + d2, [loop length], [long jump] + d4, [loop length],
 
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-  
-
-  unmapped, unmapped, unmapped, unmapped,
-
+  ..unmappedmiddle,
 )
-
 #let rsharedbottomcmds = arguments(
 
     [add folder to favorites], [browser view],
     unmapped, unmapped, [waveform zoom], [shift]
 )
 
+//shift
 #let rsharedtopcmdsshift = arguments(
   [Shift],
 
-  unmapped, same, unmapped, [set loop \ _deck 4_],
-  [short jump \ _deck 2_], [move loop \ _deck 2_], unmapped, [loop length \ _deck 4_],
+  unmapped, same + [ \ \ ], unmapped, same + [ \ \ ],
+  [short jump] + d2, [move loop] + d2, [short jump] + d4, [move loop] + d4,
 
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-
-  unmapped, unmapped, unmapped, unmapped,
-  unmapped, unmapped, unmapped, unmapped,
-  
-
-  unmapped, unmapped, unmapped, unmapped,
+  ..unmappedmiddle,
 )
 
 #let rsharedbottomcmdsshift = arguments(
   unmapped, same,
   unmapped, [scroll sidebar], [font size], [shift]
 )
+
+#let controllerpage(leftcntrls, shiftleftcntrls, rightcntrls, shiftrightcntrls) = {
+
+  horlayoutshift(
+    "Left controller",
+    layouttable( 
+      ..lsharedtopcmds,
+  
+      ..leftcntrls, 
+  
+      ..lsharedbottomcmds
+    ),
+  
+    layouttable( 
+  
+      ..lsharedtopcmdsshift,
+  
+      ..shiftleftcntrls, 
+  
+      ..lsharedbottomcmdsshift,
+    )
+  )
+  
+  pagebreak()
+  
+  horlayoutshift(
+    "Right controller",
+    layouttable( 
+      ..rsharedtopcmds,
+  
+      ..rightcntrls, 
+  
+      ..rsharedbottomcmds
+    ),
+  
+    layouttable( 
+  
+      ..rsharedtopcmdsshift,
+  
+  
+      ..shiftrightcntrls, 
+  
+  
+      ..rsharedbottomcmdsshift,
+    )
+  )
+}
+
+
