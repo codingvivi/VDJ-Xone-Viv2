@@ -236,6 +236,7 @@
       ..sharedcmds_bottom_left_shift,
     )
   )
+  heading(level: 4, "Description")
   description_left 
   pagebreak()
   
@@ -260,6 +261,7 @@
       ..sharedcmds_bottom_right_shift,
     )
   )
+  heading(level: 4, "Description")
   description_right
 }
 //writes decks to cells and returns array
@@ -280,15 +282,16 @@
   description
 ) = [
   == Page #page_name: #page_title
+  //create arrays with deck targets in them
   #let top_left = {writedeck((..halfdupebuttonmatrix), d1)}
-  #let top_left_shift = {writedeck((..halfdupebuttonmatrix), d1)}
+  #let top_left_shift = {writedeck((..halfdupebuttonmatrix_shift), d1)}
   #let bottom_left = {writedeck((..halfdupebuttonmatrix), d3)}
-  #let bottom_left_shift = {writedeck((..halfdupebuttonmatrix), d3)}
+  #let bottom_left_shift = {writedeck((..halfdupebuttonmatrix_shift), d3)}
   #let top_right = {writedeck((..halfdupebuttonmatrix), d2)}
-  #let top_right_shift = {writedeck((..halfdupebuttonmatrix), d2)}
+  #let top_right_shift = {writedeck((..halfdupebuttonmatrix_shift), d2)}
   #let bottom_right = {writedeck((..halfdupebuttonmatrix), d4)}
-  #let bottom_right_shift = {writedeck((..halfdupebuttonmatrix), d4)}
-  
+  #let bottom_right_shift = {writedeck((..halfdupebuttonmatrix_shift), d4)}
+  // Create layout pages from arrays above
   #controllerpage(
     (..top_left, ..bottom_left),
     (..top_left_shift, ..bottom_left_shift),
