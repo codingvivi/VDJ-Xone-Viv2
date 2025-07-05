@@ -144,7 +144,7 @@
 
 // ---- Left controller ----
 // Normal
-#let lsharedtopcmds = arguments(
+#let sharedcmds_top_left = arguments(
 
   [Normal],
 
@@ -154,13 +154,13 @@
   ..unmappedmiddle, 
 )
 
-#let lsharedbottomcmds = arguments(
+#let sharedcmds_bottom_left = arguments(
 
     [add folder to favorites], [add to sidelist],
     unmapped, [scroll folders], [scroll songs], [shift]
 )
 // Shift
-#let lsharedtopcmdsshift = arguments(
+#let sharedcmds_top_left_shift = arguments(
   [Shift],
 
   unmapped, same + [\ \ ], unmapped, same + [\ \ ],
@@ -169,7 +169,7 @@
   ..unmappedmiddle,
 )
 
-#let lsharedbottomcmdsshift = arguments(
+#let sharedcmds_bottom_left_shift = arguments(
   [ebp1], [ebp2],
   unmapped, same, [BPM -/+ \ _masterdeck_ ], [shift]
 )
@@ -177,7 +177,7 @@
 
 // ---- Right controller ----
 // Normal
-#let rsharedtopcmds = arguments(
+#let sharedcmds_top_right = arguments(
 
   [Normal],
 
@@ -186,14 +186,14 @@
 
   ..unmappedmiddle,
 )
-#let rsharedbottomcmds = arguments(
+#let sharedcmds_bottom_right = arguments(
 
     [add folder to favorites], [browser view],
     unmapped, unmapped, [waveform zoom], [shift]
 )
 
 //shift
-#let rsharedtopcmdsshift = arguments(
+#let sharedcmds_top_right_shift = arguments(
   [Shift],
 
   unmapped, same + [ \ \ ], unmapped, same + [ \ \ ],
@@ -202,56 +202,101 @@
   ..unmappedmiddle,
 )
 
-#let rsharedbottomcmdsshift = arguments(
+#let sharedcmds_bottom_right_shift = arguments(
   unmapped, same,
   unmapped, [scroll sidebar], [font size], [shift]
 )
 
-#let controllerpage(leftcntrls, shiftleftcntrls, rightcntrls, shiftrightcntrls) = {
+//layout of full page
+#let controllerpage(
+  cntrls_left, 
+  cntrls_left_shift, 
+  description_left,
+  cntrls_right, 
+  cntrls_right_shift,
+  description_right
+) = {
 
   horlayoutshift(
     "Left controller",
     layouttable( 
-      ..lsharedtopcmds,
+      ..sharedcmds_top_left,
   
-      ..leftcntrls, 
+      ..cntrls_left, 
   
-      ..lsharedbottomcmds
+      ..sharedcmds_bottom_left
     ),
   
     layouttable( 
   
-      ..lsharedtopcmdsshift,
+      ..sharedcmds_top_left_shift,
   
-      ..shiftleftcntrls, 
+      ..cntrls_left_shift, 
   
-      ..lsharedbottomcmdsshift,
+      ..sharedcmds_bottom_left_shift,
     )
   )
-  
+  description_left 
   pagebreak()
   
   horlayoutshift(
     "Right controller",
     layouttable( 
-      ..rsharedtopcmds,
+      ..sharedcmds_top_right,
   
-      ..rightcntrls, 
+      ..cntrls_right, 
   
-      ..rsharedbottomcmds
+      ..sharedcmds_bottom_right
     ),
   
     layouttable( 
   
-      ..rsharedtopcmdsshift,
+      ..sharedcmds_top_right_shift,
   
   
-      ..shiftrightcntrls, 
+      ..cntrls_right_shift, 
   
   
-      ..rsharedbottomcmdsshift,
+      ..sharedcmds_bottom_right_shift,
     )
   )
+  description_right
+}
+//writes decks to cells and returns array
+#let writedeck(dbm, decktarget) = {
+  for value in range(8) {
+    ( dbm.at(value) += decktarget)
+  }
+  dbm
 }
 
+//full layout of page with duplicated controls 
+//across 4 halves
+#let cp_duplicatehalves(
+  page_name, 
+  page_title, 
+  halfdupebuttonmatrix,
+  halfdupebuttonmatrix_shift,
+  description
+) = [
+  == Page #page_name: #page_title
+  #let top_left = {writedeck((..halfdupebuttonmatrix), d1)}
+  #let top_left_shift = {writedeck((..halfdupebuttonmatrix), d1)}
+  #let bottom_left = {writedeck((..halfdupebuttonmatrix), d3)}
+  #let bottom_left_shift = {writedeck((..halfdupebuttonmatrix), d3)}
+  #let top_right = {writedeck((..halfdupebuttonmatrix), d2)}
+  #let top_right_shift = {writedeck((..halfdupebuttonmatrix), d2)}
+  #let bottom_right = {writedeck((..halfdupebuttonmatrix), d4)}
+  #let bottom_right_shift = {writedeck((..halfdupebuttonmatrix), d4)}
+  
+  #controllerpage(
+    (..top_left, ..bottom_left),
+    (..top_left_shift, ..bottom_left_shift),
+    description,
 
+    (..top_right, ..bottom_right),
+    (..top_right_shift, ..bottom_right_shift),
+    description,
+  )
+
+]

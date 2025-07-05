@@ -1,11 +1,11 @@
-#import "controllerlayout.typ": *
+#import "controllerlayout.typ": controllerpage, d13, d24, same
 
 
 == Layer page 
 #let blank = {text(fill: gray, "blank")}
 
 #let dupebuttonmatrix = (
-  [page A: \ play controls], [page B: \ slicer], [page C: \ beat roll], [page D: \ keycue],
+  [page A: \ play cntrl], [page B: \ slicer], [page C: \ beat roll], [page D: \ keycue],
   [page E: \ hotcues], [page F: \ cueloop], [page G: \ #blank], [page H: \ #blank],
   [page I: \ browser], [page J: \ #blank], [page K: \ #blank], [page L: \ #blank],
   [page M: \ #blank], [page N: \ #blank], [page O: \ deck opts], [page P: \ master opts],
@@ -29,5 +29,12 @@
 #for value in range(16) {
   shiftbuttonmatrix.push(same + [ \ \ \ ])
 }
+#controllerpage(
+  leftdbm,
+  shiftbuttonmatrix,
+  [],
 
-#controllerpage(leftdbm, shiftbuttonmatrix, rightdbm, shiftbuttonmatrix)
+  rightdbm,
+  shiftbuttonmatrix,
+  [],
+)
