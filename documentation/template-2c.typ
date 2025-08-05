@@ -1,4 +1,5 @@
-#let layouttable(
+#import "template-all.typ": *
+#let fullcontroller(
   title,
 
   etp1, etp2, etp3, etp4,
@@ -23,25 +24,9 @@
   ebp1, ebp2,
   layer, eb1, eb2, shift
 ) = {
-  let encp =  sym.triangle.filled.b + [\ ]
-  let encr = sym.triangle.filled.l + sym.triangle.filled.r + [\ ]
-
   set text(
     size: 8.5pt,
-    font: "Helvetica"
   )
-
-// let action(
-//   command,
-//   color: none,
-//   target: none
-// ) = {
-//   table.cell(
-//     fill: color,
-//     [#command] + [\  #text(style: "italic", size: 8pt)[#target]] 
-//   )
-// }
-  
   grid(
     columns: 1,
     align: center,
@@ -82,28 +67,6 @@
   )
 }
 
-
-#let verlayoutshift(normaltable, shiftable) = {
-  grid(
-    columns: 1,
-    row-gutter: 10pt,
-    normaltable,
-    shiftable,
-  )
-}
-
-#let horlayoutshift(controllertitle, normaltable, shiftable) = {
-  heading(
-    level: 4,
-    controllertitle
-  )
-  grid(
-    columns: (49%, 49%),
-    column-gutter: 20pt,
-    normaltable, shiftable,
-  )
-}
-
 #let dualcontrollers(lwsleft, lwsright) = {
   grid(
     columns: (50%, 50%,),
@@ -114,27 +77,6 @@
     lwsleft, lwsright
   )
 }
-
-// ----------------------------------------------------------------------------- 
-#let unmapped = [#text(fill: gray, "N/A" )]
-
-#let same = [#text(fill: gray, "Non-shift" )]
-
-#let target(deck) = {
-  if deck == "g" {
-    [\ _global_]
-  } else {
-    [\ _deck #deck _]
-  }
-}
-#let dg = target("g")
-#let d1 = target("1")
-#let d2 = target("2")
-#let d3 = target("3")
-#let d4 = target("4")
-
-#let d13 = target("1&3")
-#let d24 = target("2&4")
 
 // ----------------------------------------------------------------------------- 
 #let unmappedmiddle = ()
@@ -217,7 +159,7 @@
   description_right
 ) = {
 
-  horlayoutshift(
+  horlayout(
     "Left controller",
     layouttable( 
       ..sharedcmds_top_left,
@@ -237,10 +179,10 @@
     )
   )
   heading(level: 4, "Description")
-  description_left 
+  columns(2, description_left)
   pagebreak()
   
-  horlayoutshift(
+  horlayout(
     "Right controller",
     layouttable( 
       ..sharedcmds_top_right,
@@ -262,7 +204,7 @@
     )
   )
   heading(level: 4, "Description")
-  description_right
+  columns(2, description_right)
 }
 //writes decks to cells and returns array
 #let writedeck(dbm, decktarget) = {
@@ -299,7 +241,7 @@
 
     (..top_right, ..bottom_right),
     (..top_right_shift, ..bottom_right_shift),
-    description,
+
   )
 
 ]

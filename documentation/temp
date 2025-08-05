@@ -1,0 +1,144 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+set shortmess+=aoO
+badd +9 main.typ
+badd +18 hdbmpage-template.typ
+badd +1 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/pageA-dual-full.typ
+badd +1 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/layerpage-dual-full.typ
+badd +1 layerpage.typ
+badd +1 pageA.typ
+badd +96 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-2c.typ
+badd +47 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-all.typ
+badd +1 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-sectioned.typ
+badd +2 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/encoders-top.typ
+badd +1 ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/layout-basics.typ
+argglobal
+%argdel
+edit ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-all.typ
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 80 + 108) / 216)
+exe 'vert 2resize ' . ((&columns * 55 + 108) / 216)
+exe 'vert 3resize ' . ((&columns * 79 + 108) / 216)
+argglobal
+balt ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-2c.typ
+setlocal foldmethod=expr
+setlocal foldexpr=nvim_treesitter#foldexpr()
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=20
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+10
+sil! normal! zo
+32
+sil! normal! zo
+46
+sil! normal! zo
+51
+sil! normal! zo
+60
+sil! normal! zo
+let s:l = 47 - ((46 * winheight(0) + 37) / 75)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 47
+normal! 010|
+wincmd w
+argglobal
+if bufexists(fnamemodify("main.typ", ":p")) | buffer main.typ | else | edit main.typ | endif
+if &buftype ==# 'terminal'
+  silent file main.typ
+endif
+balt ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-sectioned.typ
+setlocal foldmethod=expr
+setlocal foldexpr=nvim_treesitter#foldexpr()
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=20
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+let s:l = 9 - ((8 * winheight(0) + 37) / 75)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 9
+normal! 029|
+wincmd w
+argglobal
+if bufexists(fnamemodify("~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-2c.typ", ":p")) | buffer ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-2c.typ | else | edit ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-2c.typ | endif
+if &buftype ==# 'terminal'
+  silent file ~/Development/Projects/2025/2025-01-06-VDJ_K2_Mapping/Viv2_VDJ_Mapping/documentation/template-2c.typ
+endif
+setlocal foldmethod=expr
+setlocal foldexpr=nvim_treesitter#foldexpr()
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=20
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+164
+sil! normal! zo
+165
+sil! normal! zo
+188
+sil! normal! zo
+let s:l = 96 - ((21 * winheight(0) + 37) / 75)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 96
+normal! 03|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 80 + 108) / 216)
+exe 'vert 2resize ' . ((&columns * 55 + 108) / 216)
+exe 'vert 3resize ' . ((&columns * 79 + 108) / 216)
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
