@@ -55,11 +55,11 @@
 
 #let normal-loop-encoder(target: str) = {
   encoder(
-    command_push: "loop", 
+    command_push: "set loop", 
     description_push: "",
     target_push: target,
   
-    command_turn: "loop length", 
+    command_turn: "loop size", 
     description_turn: str,
     target_turn: target,
   
@@ -71,9 +71,9 @@
 
 #let shift-loop-encoder(target: str) = {
   encoder(
-    command_push: unmapped, 
+    command_push: same, 
     description_push: "",
-    target_push: target,
+    target_push: same,
   
     command_turn: "loop pos", 
     description_turn: str,
@@ -92,56 +92,56 @@
 #let enc_top_1_l_normal = normal-jump-encoder(
   command_push: "jump length", 
   description_push: "",
-  target_push: "g",
+  target_push: dg,
 
-  target_jump: "1",
+  target_jump:d1,
 
   LED:"",
   description_LED: "",
 )
 
-#let enc_top_2_l_normal = normal-loop-encoder(target: "1")
+#let enc_top_2_l_normal = normal-loop-encoder(target: d1)
 
 #let enc_top_3_l_normal = normal-jump-encoder(
-  command_push: "jump length", 
+  command_push:unmapped, 
   description_push: "",
-  target_push: "g",
+  target_push: unmapped,
 
-  target_jump: "3",
+  target_jump: d3,
 
   LED:"",
   description_LED: "",
 )
 
-#let enc_top_4_l_normal = normal-loop-encoder(target: "3")
+#let enc_top_4_l_normal = normal-loop-encoder(target:d3)
 
 //shift mode
 #let enc_top_1_l_shift = shift-jump-encoder(
   command_push: "jump length", 
   description_push: "",
-  target_push: "g",
+  target_push:dg,
 
-  target_jump: "1",
+  target_jump:d1,
 
   LED:"",
   description_LED: "",
 )
 
 
-#let enc_top_2_l_shift = shift-loop-encoder(target: "1")
+#let enc_top_2_l_shift = shift-loop-encoder(target:d1)
 
 #let enc_top_3_l_shift = shift-jump-encoder(
-  command_push: "jump length", 
+  command_push:unmapped, 
   description_push: "",
-  target_push: "g",
+  target_push:unmapped,
 
-  target_jump: "1",
+  target_jump:d1,
 
   LED:"",
   description_LED: "",
 )
 
-#let enc_top_4_l_shift = shift-loop-encoder(target: "3")
+#let enc_top_4_l_shift = shift-loop-encoder(target:d3)
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                              layout template                               */

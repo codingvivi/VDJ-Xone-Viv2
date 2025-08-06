@@ -1,6 +1,6 @@
 // __________________________________ Buttons ____________________________________
 #let unmapped = [#text(fill: gray, "N/A" )]
-#let same = [#text(fill: gray, "Non_shift" )]
+#let same = [#text(fill: gray, "Non shift" )]
 
 //encoder symbols
 #let symbol_encp = sym.triangle.filled.b 
@@ -49,7 +49,7 @@
   target: str
 ) = (
   type_input: type_input,
-  target: [#targettext(target)],
+  target: target,
   command_name: command_name,
   command_description: command_description,
 )
@@ -177,7 +177,7 @@
 #let encoderlayout(encoder) = {
   grid(
     columns: 1,
-    gutter: 6pt,
+    gutter: 11pt,
     align: center,
     [#cellayout(encoder.push)],
     [#cellayout(encoder.turn)],
