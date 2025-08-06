@@ -1,6 +1,4 @@
 #import "template-all.typ": *
-#import "template-sectioned.typ": *
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                             command templates                              */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -180,20 +178,3 @@
   enc_top_4_l_shift,
 
 )
-
-//#layout-encoder-top()
-//#enc_top_1_l_normal.push.target
-//#enc_top_2_l_normal.push.target
-
-
-
-//#hardcode_l_normalr_shift(
-//  // commands normal
-//  normalcmds_l_normaleft, normalcmds_right,
-//  description_normal: [],
-//
-//  // commands shift
-//  shiftcmds_l_normaleft, shiftcmds_right,
-//  description_shift: [],
-//
-//)

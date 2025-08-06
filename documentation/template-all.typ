@@ -1,6 +1,7 @@
 // __________________________________ Buttons ____________________________________
-#let unmapped = [#text(fill: gray, "N/A" )]
-#let same = [#text(fill: gray, "Non shift" )]
+#let emptygray = rgb("#525252")
+#let unmapped = [#text(fill: emptygray, "N/A" )]
+#let same = [#text(fill: emptygray, "Non shift" )]
 
 //encoder symbols
 #let symbol_encp = sym.triangle.filled.b 
@@ -27,7 +28,7 @@
   if deck == "l" {
     "local deck"
   } 
-  if deck == "1" or deck == "2" or deck == "3" or deck == "4" {
+  if deck == "1" or deck == "2" or deck == "3" or deck == "4" or deck == "1 & 3" or deck == "2 & 4" {
     [deck #deck]
   }
 }
@@ -38,8 +39,8 @@
 #let d3 = targettext("3")
 #let d4 = targettext("4")
 
-#let d13 = targettext("1&3")
-#let d24 = targettext("2&4")
+#let d13 = targettext("1 & 3")
+#let d24 = targettext("2 & 4")
 
 // __________________________________ Controls __________________________________ 
 #let input(
@@ -58,17 +59,36 @@
   type_input: str,
   command_name: str,
   command_description: str,
-  LED_color: color,
   target: "",
+  LED_color: color,
   description_LED: ""
 ) = {
   let temp_dict = input(type_input: type_input, command_name: command_name, command_description: command_description, target: target)
-  let final_dict = temp_dict
-    .insert("LED", LED)
-    .insert("description_LED", description_LED)
-    
+  
+  let final_dict = temp_dict + (
+    "LED": LED_color,
+    "description_LED": description_LED
+  )
+ 
   return final_dict
 }
+#let button(
+  type_input: str,
+  command_name: str,
+  command_description: str,
+  target: "",
+  LED_color: color,
+  description_LED: ""
+) = (
+  input_with_LED(
+    type_input: type_input,
+    command_name: command_name,
+    command_description: command_description,
+    target: target,
+    LED_color: LED_color,
+    description_LED: description_LED
+  )
+)
 
 #let encoder(
   command_push: str, 
@@ -142,7 +162,7 @@
     }],
     [#grid(
       columns: (49%, 49%),
-      gutter: 15pt,
+      gutter: 20pt,
       controllerlayout(title: ltitle, lcntrls),
       controllerlayout(title: rtitle, rcntrls)
     )]
@@ -163,14 +183,14 @@
     input.command_name
   }
 
-  grid(
+  block(grid(
     columns: 1,
     gutter: 4pt,
     align: center,
 
     [#command_line], 
-    [#text(size: 9pt,)[_#input.target _]]
-  )
+    [#text(size: 8pt,)[_#input.target _]]
+  ))
 }    
   
 
@@ -181,6 +201,21 @@
     align: center,
     [#cellayout(encoder.push)],
     [#cellayout(encoder.turn)],
+  )
+}
+
+
+#let buttonmatrixlayout(..buttons) = {
+  //.pos creates array of all positional arguments
+  //.map creates array transformed with function passed
+  // each value gets stuck into btn
+  let cells = buttons.pos().map(btn => cellayout(btn))
+  grid(
+    columns: (25%,25%,25%,25%,),
+    gutter: 4pt,
+    align: center,
+
+    ..cells
   )
 }
 
