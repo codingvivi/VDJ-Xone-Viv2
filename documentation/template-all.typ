@@ -1,7 +1,7 @@
 // __________________________________ Buttons ____________________________________
 #let emptygray = rgb("#525252")
-#let unmapped = [#text(fill: emptygray, "N/A" )]
-#let same = [#text(fill: emptygray, "Non shift" )]
+#let unmapped_text = [#text(fill: emptygray, "N/A" )]
+#let same_text = [#text(fill: emptygray, "Non shift" )]
 
 //encoder symbols
 #let symbol_encp = sym.triangle.filled.b 
@@ -42,74 +42,69 @@
 #let d13 = targettext("1 & 3")
 #let d24 = targettext("2 & 4")
 
+
 // __________________________________ Controls __________________________________ 
+#let command(
+  command_name: str, 
+  command_description: none, 
+  target_type: str,
+  LED: none,
+) = (
+  command_name: command_name,
+  command_description:command_description,
+  target_type: target_type,
+  LED: LED,
+)
+
+#let unmapped_command = command(
+  command_name: unmapped_text,
+  command_description: none,
+  target_type: unmapped_text,
+  LED: none,
+)
+
+#let same_command = command(
+  command_name: same_text,
+  command_description: none,
+  target_type: same_text,
+  LED: none,
+)
+
 #let input(
   type_input: str, 
-  command_name: str, 
-  command_description: str, 
+  command: command,
   target: str
 ) = (
   type_input: type_input,
+  command:command,
   target: target,
-  command_name: command_name,
-  command_description: command_description,
 )
 
-#let input_with_LED(
-  type_input: str,
-  command_name: str,
-  command_description: str,
-  target: "",
-  LED_color: color,
-  description_LED: ""
-) = {
-  let temp_dict = input(type_input: type_input, command_name: command_name, command_description: command_description, target: target)
-  
-  let final_dict = temp_dict + (
-    "LED": LED_color,
-    "description_LED": description_LED
-  )
- 
-  return final_dict
-}
 #let button(
-  type_input: str,
-  command_name: str,
-  command_description: str,
-  target: "",
-  LED_color: color,
-  description_LED: ""
+  command: command,
+  target: dg,
 ) = (
-  input_with_LED(
-    type_input: type_input,
-    command_name: command_name,
-    command_description: command_description,
-    target: target,
-    LED_color: LED_color,
-    description_LED: description_LED
+  input(
+    type_input: "Button",
+    command: command,
+    target: target
   )
 )
 
 #let encoder(
-  command_push: str, 
-  description_push: str,
+  command_push: command, 
   target_push: "",
-  command_turn: str, 
-  description_turn: str,
+  command_turn: command, 
   target_turn: "",
-  LED:"",
-  description_LED: "",
 ) = {
   let pushdict = input(
     type_input: "enconder_push",
-    command_name: command_push,
-    command_description: description_push,
+    command: command_push,
     target: target_push
   )
   let turndict = input(
     type_input: "encoder_turn",
-    command_name: command_turn,
-    command_description: description_turn,
+    command: command_turn,
     target: target_turn
   )
 
@@ -120,11 +115,10 @@
     type_input: "encoder_full",
     push: pushdict,
     turn: turndict,
-    LED: LED,
-    description_LED: description_LED,
   )  
   fulldict
 }
+#let unmappedencoder =  encoder()
 // __________________________________ Layout ___________________________________ 
 #let controllerlayout(title: "", controls) = {
   set text(
@@ -145,33 +139,49 @@
     )
 }
 
-#let verlayout(lcntrls, ltitle, rcntrls, rtitle) = {
+#let verlayout(layouttitle:"", topcntrls, toptitle, bottomcntrls, bottomtitle) = {
   grid(
-    columns: 1,
-    row_gutter: 10pt,
-    controllerlayout(toptitle, topcntrls),
-    controllerlayout(bottomtitle, bottomcntrls)
+    if layouttitle != ""{
+      align(center)[#heading(level:4, layouttitle)]
+    },
+    grid(
+      columns: 1,
+      gutter: 10pt,
+      controllerlayout(title:toptitle, topcntrls),
+      controllerlayout(title:bottomtitle, bottomcntrls)
+    )
   )
 }
 
 #let horlayout(layouttitle: "", ltitle, lcntrls, rtitle, rcntrls,) = {
   grid(
- //   gutter: 4pt,
-    [#if layouttitle != ""{
+    if layouttitle != ""{
       align(center)[#heading(level:4, layouttitle)]
-    }],
-    [#grid(
+    },
+    grid(
       columns: (49%, 49%),
       gutter: 20pt,
       controllerlayout(title: ltitle, lcntrls),
       controllerlayout(title: rtitle, rcntrls)
-    )]
+    )
   )
 }
 
 #let horshiftlayout(normal_cntrls, shift_cntrls) = { 
   horlayout("Normal", normal_cntrls, "Shift", shift_cntrls)
 } 
+
+#let vershiftlayout(normal_cntrls, shift_cntrls) = { 
+  verlayout("Normal", normal_cntrls, "Shift", shift_cntrls)
+} 
+
+#let fulllayout(l_normal_cntrls, r_normal_cntrls, l_shift_cntrls,  r_shift_cntrls) = {
+  grid(
+    columns: (50%, 50%),
+    vershiftlayout(l_normal_cntrls, l_shift_cntrls),
+    vershiftlayout(r_normal_cntrls, r_shift_cntrls)
+  )
+}
 
 #let cellayout(input) = {
   let command_line = {
@@ -180,7 +190,7 @@
       input.inputsymbol 
       h(0.3em) // spacing
     }
-    input.command_name
+    input.command.command_name
   }
 
   block(grid(
@@ -197,7 +207,7 @@
 #let encoderlayout(encoder) = {
   grid(
     columns: 1,
-    gutter: 11pt,
+    gutter: 5pt,
     align: center,
     [#cellayout(encoder.push)],
     [#cellayout(encoder.turn)],

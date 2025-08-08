@@ -2,145 +2,167 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                             command templates                              */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#let normal-jump-encoder(
-  command_push: str, 
-  description_push: "",
-  target_push: str,
 
-  target_jump: str,
 
-  LED: str,
-  description_LED: str,
-) = (
-  encoder(
-    command_push: command_push, 
-    description_push: description_push,
-    target_push: target_push,
-  
-    command_turn: "jump long", 
-    description_turn: "",
-    target_turn: target_jump,
-  
-    LED:LED,
-    description_LED:description_LED,
-  )
+
+#let jump-long = command(
+  command_name: "jump long",
+  command_description: none,
+  target_type: dl,
+  LED: none,
 )
 
-#let shift-jump-encoder(
-  command_push: str, 
-  description_push: "",
-  target_push: str,
-
-  target_jump: str,
-
-  LED: str,
-  description_LED: str,
-) = (
-  encoder(
-    command_push: command_push, 
-    description_push: description_push,
-    target_push: target_push,
-  
-    command_turn: "jump short", 
-    description_turn: "",
-    target_turn: target_jump,
-  
-    LED:LED,
-    description_LED:description_LED,
-  )
+#let jump-short = command(
+  command_name: "jump short",
+  command_description: none,
+  target_type: dl,
+  LED: none,
 )
 
+#let change-jump-length = command(
+  command_name: "jump length",
+  command_description: none,
+  target_type: dg,
+  LED: none,
+)
 
-#let normal-loop-encoder(target: str) = {
-  encoder(
-    command_push: "set loop", 
-    description_push: "",
-    target_push: target,
-  
-    command_turn: "loop size", 
-    description_turn: str,
-    target_turn: target,
-  
-    LED:"",
-    description_LED: "",
-  )
+#let set-loop = command(
+  command_name: "set loop",
+  command_description: none,
+  target_type: dl,
+  LED: none,
+)
 
-}
+#let change-loop-length = command(
+  command_name: "loop size",
+  command_description: none,
+  target_type: dl,
+  LED: none,
+)
 
-#let shift-loop-encoder(target: str) = {
-  encoder(
-    command_push: same, 
-    description_push: "",
-    target_push: same,
-  
-    command_turn: "loop pos", 
-    description_turn: str,
-    target_turn: target,
-  
-    LED:"",
-    description_LED: "",
-  )
-
-}
-
+#let move-loop = command(
+  command_name: "move loop",
+  command_description: none,
+  target_type: dl,
+  LED: none,
+)
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                input dicts                                 */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-//normal mode
-#let enc_top_1_l_normal = normal-jump-encoder(
-  command_push: "jump length", 
-  description_push: "",
+//left side
+#let enc_top_1_l_normal = encoder(
+  command_push: change-jump-length,
   target_push: dg,
-
-  target_jump:d1,
-
-  LED:"",
-  description_LED: "",
+  command_turn: jump-long,
+  target_turn: d1
 )
 
-#let enc_top_2_l_normal = normal-loop-encoder(target: d1)
-
-#let enc_top_3_l_normal = normal-jump-encoder(
-  command_push:unmapped, 
-  description_push: "",
-  target_push: unmapped,
-
-  target_jump: d3,
-
-  LED:"",
-  description_LED: "",
+#let enc_top_2_l_normal = encoder(
+  command_push: set-loop,
+  target_push: d1,
+  command_turn: change-loop-length,
+  target_turn: d1
 )
 
-#let enc_top_4_l_normal = normal-loop-encoder(target:d3)
+#let enc_top_3_l_normal = encoder(
+  command_push: unmapped_command,
+  target_push: unmapped_text,
+  command_turn: jump-long,
+  target_turn: d3
+)
+
+#let enc_top_4_l_normal = encoder(
+  command_push: set-loop,
+  target_push: d3,
+  command_turn: change-loop-length,
+  target_turn: d3
+)
+//right side
+#let enc_top_1_r_normal = encoder(
+  command_push: change-jump-length,
+  target_push: dg,
+  command_turn: jump-long,
+  target_turn: d2
+)
+
+#let enc_top_2_r_normal = encoder(
+  command_push: set-loop,
+  target_push: d2,
+  command_turn: change-loop-length,
+  target_turn: d2
+)
+
+#let enc_top_3_r_normal = encoder(
+  command_push: unmapped_command,
+  target_push: unmapped_text,
+  command_turn: jump-long,
+  target_turn: d4
+)
+
+#let enc_top_4_r_normal = encoder(
+  command_push: set-loop,
+  target_push: d4,
+  command_turn: change-loop-length,
+  target_turn: d4
+)
+
 
 //shift mode
-#let enc_top_1_l_shift = shift-jump-encoder(
-  command_push: "jump length", 
-  description_push: "",
-  target_push:dg,
-
-  target_jump:d1,
-
-  LED:"",
-  description_LED: "",
+#let enc_top_1_l_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: jump-short,
+  target_turn: d1
 )
 
-
-#let enc_top_2_l_shift = shift-loop-encoder(target:d1)
-
-#let enc_top_3_l_shift = shift-jump-encoder(
-  command_push:unmapped, 
-  description_push: "",
-  target_push:unmapped,
-
-  target_jump:d1,
-
-  LED:"",
-  description_LED: "",
+#let enc_top_2_l_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: move-loop,
+  target_turn: d1
 )
 
-#let enc_top_4_l_shift = shift-loop-encoder(target:d3)
+#let enc_top_3_l_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: jump-short,
+  target_turn: d3
+)
 
+#let enc_top_4_l_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: move-loop,
+  target_turn: d3
+)
+
+#let enc_top_1_r_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: jump-short,
+  target_turn: d2
+)
+
+#let enc_top_2_r_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: move-loop,
+  target_turn: d2
+)
+
+#let enc_top_3_r_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: jump-short,
+  target_turn: d4
+)
+
+#let enc_top_4_r_shift = encoder(
+  command_push: same_command,
+  target_push: same_text,
+  command_turn: move-loop,
+  target_turn: d4
+)
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                              layout template                               */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -156,25 +178,39 @@
   ) 
 }
 
-#let layout-encoder-top-full(e1n, e2n, e3n, e4n, e1s, e2s, e3s, e4s) = {
-  horshiftlayout(
-    layout-encoder-top-half(e1n,e2n,e3n,e4n),
-    layout-encoder-top-half(e1s,e2s,e3s,e4s)
+#let layout-encoder-top-full(
+  e1ln, e2ln, e3ln, e4ln, 
+  e1rn, e2rn, e3rn, e4rn,
+  e1ls, e2ls, e3ls, e4ls, 
+  e1rs, e2rs, e3rs, e4rs
+) = {
+  fulllayout(
+    layout-encoder-top-half(e1ln,e2ln,e3ln,e4ln),
+    layout-encoder-top-half(e1rn,e2rn,e3rn,e4rn),
+    layout-encoder-top-half(e1ls,e2ls,e3ls,e4ls),
+    layout-encoder-top-half(e1rs,e2rs,e3rs,e4rs)
   )
 }
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-=== Top encoder section
 #layout-encoder-top-full(
   enc_top_1_l_normal,
   enc_top_2_l_normal,
   enc_top_3_l_normal,
   enc_top_4_l_normal,
+  enc_top_1_r_normal,
+  enc_top_2_r_normal,
+  enc_top_3_r_normal,
+  enc_top_4_r_normal,
   enc_top_1_l_shift,
   enc_top_2_l_shift,
   enc_top_3_l_shift,
   enc_top_4_l_shift,
-
+  enc_top_1_r_shift,
+  enc_top_2_r_shift,
+  enc_top_3_r_shift,
+  enc_top_4_r_shift,
 )

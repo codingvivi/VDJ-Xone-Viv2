@@ -5,6 +5,16 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               duplicate vars                               */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let shiftdupepagebutton = {
+  button(
+    command_name: [#same ],
+    command_description: "",
+    target: same,
+    LED_color: "",
+    description_LED: "",
+  )
+}
+
 #let blankpage(letter) = {
   button(
     command_name:  [#pg(letter) #text(fill: rgb("#aaaaaa"), "blank")],
@@ -123,42 +133,42 @@
 
 //shift
 
-#let buttonA_l_shift = buttonA(d24)
+#let buttonA_l_shift = shiftdupepagebutton
 
-#let buttonB_l_shift = buttonB(d24)
+#let buttonB_l_shift = shiftdupepagebutton
 
-#let buttonC_l_shift = buttonC(d24)
+#let buttonC_l_shift = shiftdupepagebutton
 
-#let buttonD_l_shift = buttonD(d24)
+#let buttonD_l_shift = shiftdupepagebutton
 
-#let buttonE_l_shift = buttonE(d24)
+#let buttonE_l_shift = shiftdupepagebutton
 
-#let buttonF_l_shift = buttonF(d24)
+#let buttonF_l_shift = shiftdupepagebutton
 
-#let buttonG_l_shift = buttonG
+#let buttonG_l_shift = shiftdupepagebutton
 
-#let buttonH_l_shift = buttonH
+#let buttonH_l_shift = shiftdupepagebutton
 
-#let buttonI_l_shift = buttonI
+#let buttonI_l_shift = shiftdupepagebutton
 
-#let buttonJ_l_shift = buttonJ
+#let buttonJ_l_shift = shiftdupepagebutton
 
-#let buttonK_l_shift = buttonK
+#let buttonK_l_shift = shiftdupepagebutton
 
-#let buttonL_l_shift = buttonL
+#let buttonL_l_shift = shiftdupepagebutton
 
-#let buttonM_l_shift = buttonM
+#let buttonM_l_shift = shiftdupepagebutton
 
-#let buttonN_l_shift = buttonN
+#let buttonN_l_shift = shiftdupepagebutton
 
-#let buttonO_l_shift = buttonO
+#let buttonO_l_shift = shiftdupepagebutton
 
-#let buttonP_l_shift = buttonP
+#let buttonP_l_shift = shiftdupepagebutton
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#horshiftlayout(
+#vershiftlayout(
 
   buttonmatrixlayout(
     buttonA_l_normal,

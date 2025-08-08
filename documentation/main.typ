@@ -27,7 +27,6 @@
 #pagebreak()
   == Button matrix pages
     === Layer Page
-      #include "pageLayer.typ"
-
-    === Page
-      #include "pageA.typ"
+      //#include "pageLayer.typ"
+    === Page A
+      //#include "pageA.typ"
