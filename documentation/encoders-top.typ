@@ -1,6 +1,6 @@
-#import "templates-text.typ":*
-#import "templates-cmds-ins.typ":*
-#import "templates-layout.typ":*
+#import "templates/text.typ":*
+#import "templates/cmds-ins.typ":*
+#import "templates/layouts.typ":*
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                             command templates                              */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -80,8 +80,8 @@
 
 //right side
 #let enc-top-1-r-normal = encoder(
-  command-push: change-jump-length,
-  target-push: dg,
+  command-push: unmapped-command,
+  target-push: unmapped-text,
   command-turn: jump-long,
   target-turn: d2
 )
@@ -188,7 +188,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-test
+= Top encoder section
 #layout-encoder-top-full(
   enc-top-1-l-normal,
   enc-top-2-l-normal,

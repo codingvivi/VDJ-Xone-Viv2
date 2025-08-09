@@ -1,6 +1,6 @@
-#import "templates-text.typ":*
-#import "templates-cmds-ins.typ":*
-#import "templates-layout.typ":*
+#import "templates/text.typ":*
+#import "templates/cmds-ins.typ":*
+#import "templates/layouts.typ":*
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               misc templates                               */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -9,49 +9,49 @@
 /*                               page commands                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let blankpage(letter) = command(
-    command-name:  text(fill: rgb("#aaaaaa"), "blank"),
+    command-name:  text(fill: rgb("#aaaaaa"), "blank page"),
     command-description:"", 
     target-type: unmapped-text,
     LED: none
 )
 
 #let pageA = command(
-    command-name: "play controls",
+    command-name: "A: play cntrl",
     command-description: "",
     target-type: dl
 )
 
 
 #let pageB = command(
-    command-name: "slicer",
+    command-name: "B: slicer",
     command-description: "",
     target-type: dl
 )
 
 
 #let pageC = command(
-    command-name: "beat roll",
+    command-name: "C: beat roll",
     command-description: "",
     target-type: dl
 )
 
 
 #let pageD = command(
-    command-name: "keycue",
+    command-name: "D: keycue",
     command-description: "",
     target-type: dl
 )
 
 
 #let pageE = command(
-    command-name: "hotcues",
+    command-name: "E: hotcues",
     command-description: "",
     target-type: dl
 )
 
 
 #let pageF = command(
-    command-name: "cueloop",
+    command-name: "F: cueloop",
     command-description: "",
     target-type: dl
 )
@@ -291,80 +291,35 @@
 #let buttonP-r-shift = same-button
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ page contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+= Layer Page
 #lrk2-vertshift-layout(
   buttonmatrixlayout(
-    buttonA-l-normal,
-    buttonB-l-normal,
-    buttonC-l-normal,
-    buttonD-l-normal,
-    buttonE-l-normal,
-    buttonF-l-normal,
-    buttonG-l-normal,
-    buttonH-l-normal,
-    buttonI-l-normal,
-    buttonJ-l-normal,
-    buttonK-l-normal,
-    buttonL-l-normal,
-    buttonM-l-normal,
-    buttonN-l-normal,
-    buttonO-l-normal,
-    buttonP-l-normal,
+    buttonA-l-normal, buttonB-l-normal, buttonC-l-normal, buttonD-l-normal,
+    buttonE-l-normal, buttonF-l-normal, buttonG-l-normal, buttonH-l-normal,
+    buttonI-l-normal, buttonJ-l-normal, buttonK-l-normal, buttonL-l-normal,
+    buttonM-l-normal, buttonN-l-normal, buttonO-l-normal, buttonP-l-normal,
   ),
 
   buttonmatrixlayout(
-    buttonA-r-normal,
-    buttonB-r-normal,
-    buttonC-r-normal,
-    buttonD-r-normal,
-    buttonE-r-normal,
-    buttonF-r-normal,
-    buttonG-r-normal,
-    buttonH-r-normal,
-    buttonI-r-normal,
-    buttonJ-r-normal,
-    buttonK-r-normal,
-    buttonL-r-normal,
-    buttonM-r-normal,
-    buttonN-r-normal,
-    buttonO-r-normal,
-    buttonP-r-normal,
+    buttonA-r-normal, buttonB-r-normal, buttonC-r-normal, buttonD-r-normal,
+    buttonE-r-normal, buttonF-r-normal, buttonG-r-normal, buttonH-r-normal,
+    buttonI-r-normal, buttonJ-r-normal, buttonK-r-normal, buttonL-r-normal,
+    buttonM-r-normal, buttonN-r-normal, buttonO-r-normal, buttonP-r-normal,
   ),
 
   buttonmatrixlayout(
-    buttonA-l-shift,
-    buttonB-l-shift,
-    buttonC-l-shift,
-    buttonD-l-shift,
-    buttonE-l-shift,
-    buttonF-l-shift,
-    buttonG-l-shift,
-    buttonH-l-shift,
-    buttonI-l-shift,
-    buttonJ-l-shift,
-    buttonK-l-shift,
-    buttonL-l-shift,
-    buttonM-l-shift,
-    buttonN-l-shift,
-    buttonO-l-shift,
-    buttonP-l-shift,
+    buttonA-l-shift, buttonB-l-shift, buttonC-l-shift, buttonD-l-shift,
+    buttonE-l-shift, buttonF-l-shift, buttonG-l-shift, buttonH-l-shift,
+    buttonI-l-shift, buttonJ-l-shift, buttonK-l-shift, buttonL-l-shift,
+    buttonM-l-shift, buttonN-l-shift, buttonO-l-shift, buttonP-l-shift,
   ),
 
   buttonmatrixlayout(
-    buttonA-r-shift,
-    buttonB-r-shift,
-    buttonC-r-shift,
-    buttonD-r-shift,
-    buttonE-r-shift,
-    buttonF-r-shift,
-    buttonG-r-shift,
-    buttonH-r-shift,
-    buttonI-r-shift,
-    buttonJ-r-shift,
-    buttonK-r-shift,
-    buttonL-r-shift,
-    buttonM-r-shift,
-    buttonN-r-shift,
-    buttonO-r-shift,
-    buttonP-r-shift,
+    buttonA-r-shift, buttonB-r-shift, buttonC-r-shift, buttonD-r-shift,
+    buttonE-r-shift, buttonF-r-shift, buttonG-r-shift, buttonH-r-shift,
+    buttonI-r-shift, buttonJ-r-shift, buttonK-r-shift, buttonL-r-shift,
+    buttonM-r-shift, buttonN-r-shift, buttonO-r-shift, buttonP-r-shift,
   )
 )
+
+#pagebreak()

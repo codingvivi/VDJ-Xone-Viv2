@@ -1,5 +1,5 @@
-#import "template-text.typ":*
-#import "templates-cmds-ins.typ":*
+#import "text.typ":*
+#import "cmds-ins.typ":*
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                            page content helpers                            */
@@ -61,7 +61,7 @@
   // each value gets stuck into btn
   let cells = buttons.pos().map(btn => cellayout(btn))
   grid(
-    columns: (24%,24%,24%,24%,),
+    columns: (25%,25%,25%,25%,),
     row-gutter: 7pt,
     align: center,
 
@@ -92,7 +92,7 @@
 
     if title != ""{
       heading(
-        level: 4,
+        level: 5,
         title
       )
     },
@@ -119,7 +119,8 @@
 #let horizontalgroupingpair(layouttitle: "", ltitle, lcntrls, rtitle, rcntrls,) = {
   grid(
     if layouttitle != ""{
-      align(center)[#heading(level:4, layouttitle)]
+      //align(center)[#heading(level:4, layouttitle)]
+      heading(level:4, layouttitle)
     },
     grid(
       columns: (49%, 49%),
@@ -139,10 +140,18 @@
   heading-l-2, l-2-cntrls, 
   heading-r-2, r-2-cntrls
 ) = {
-  heading(level: 3, heading-section-1)
-  horizontalgroupingpair(heading-l-1, l-1-cntrls, heading-l-2, r-1-cntrls)
-  heading(level: 3, heading-section-2)
-  horizontalgroupingpair(heading-r-1, l-2-cntrls, heading-r-2, r-2-cntrls)
+
+  horizontalgroupingpair(
+    layouttitle: heading-section-1, 
+    heading-l-1, l-1-cntrls, 
+    heading-r-1, r-1-cntrls
+  )
+
+  horizontalgroupingpair(
+    layouttitle: heading-section-2,
+    heading-l-2, l-2-cntrls,
+    heading-r-2, r-2-cntrls
+  )
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -159,7 +168,10 @@
 
 /* ~~~~~~~~~~~~~~~~~~~~ left and right controller layout ~~~~~~~~~~~~~~~~~~~~ */
 #let hork2layout(normal-cntrls, shift-cntrls) = { 
-  horizontalgroupingpair("Left controller", normal-cntrls, "Right controller", shift-cntrls)
+  horizontalgroupingpair(
+    "Left controller", normal-cntrls,
+    "Right controller", shift-cntrls
+  )
 } 
 
 #let lrk2-vertshift-layout(
@@ -175,4 +187,40 @@
   "Right controller", r-shift-cntrls,
 )
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                       hardcoded duplicate templates                        */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let dupebuttonmatrix(normal-commands, shift-commands) = {
 
+  let createbutton(cmd, deck) = {
+    let returnbutton = button(
+      command: cmd,
+      target: deck
+    )
+    returnbutton
+  }
+
+  let d1-n-buttons = normal-commands.map(cmd => createbutton(cmd, d1))
+  let d2-n-buttons = normal-commands.map(cmd => createbutton(cmd, d2))
+  let d3-n-buttons = normal-commands.map(cmd => createbutton(cmd, d3))
+  let d4-n-buttons = normal-commands.map(cmd => createbutton(cmd, d4))
+
+  let d1-s-buttons = shift-commands.map(cmd => createbutton(cmd, d1))
+  let d2-s-buttons = shift-commands.map(cmd => createbutton(cmd, d2))
+  let d3-s-buttons = shift-commands.map(cmd => createbutton(cmd, d3))
+  let d4-s-buttons = shift-commands.map(cmd => createbutton(cmd, d4))
+
+  let left-normal-commands = (d1-n-buttons + d3-n-buttons)
+  let right-normal-commands = (d2-n-buttons+ d4-n-buttons)
+
+  let left-shift-commands = (d1-s-buttons + d3-s-buttons)
+  let right-shift-commands = (d2-s-buttons + d4-s-buttons)
+
+  lrk2-vertshift-layout(
+    buttonmatrixlayout(..left-normal-commands),
+    buttonmatrixlayout(..right-normal-commands),
+
+    buttonmatrixlayout(..left-shift-commands),
+    buttonmatrixlayout(..right-shift-commands)
+  )
+}
