@@ -1,4 +1,3 @@
-== Layout basics
 Latch layers functionality mimics setting 2 
 (the latch layer button changing the functionality only of the buttons A-P).
 However, instead of cycling through 3 layers

@@ -1,210 +1,370 @@
-#import "template-all.typ": *
-
-#let pg(letter) = {"Page " + letter + ":" + linebreak()}
+#import "templates-text.typ":*
+#import "templates-cmds-ins.typ":*
+#import "templates-layout.typ":*
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                               misc templates                               */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/*                               duplicate vars                               */
+/*                               page commands                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#let shiftdupepagebutton = {
-  button(
-    command_name: [#same ],
-    command_description: "",
-    target: same,
-    LED_color: "",
-    description_LED: "",
-  )
-}
+#let blankpage(letter) = command(
+    command-name:  text(fill: rgb("#aaaaaa"), "blank"),
+    command-description:"", 
+    target-type: unmapped-text,
+    LED: none
+)
 
-#let blankpage(letter) = {
-  button(
-    command_name:  [#pg(letter) #text(fill: rgb("#aaaaaa"), "blank")],
-    command_description:"", 
-    target: unmapped,
-    LED_color: "",
-    description_LED: "" 
-  )
-}
+#let pageA = command(
+    command-name: "play controls",
+    command-description: "",
+    target-type: dl
+)
 
-// duplicate buttons
-#let buttonA(target) = {
-  button(
-    command_name: [#pg("A") play controls],
-    command_description: "",
-    target: target
-  )
-}
 
-#let buttonB(target) = {
-  button(
-    command_name: [#pg("B") slicer],
-    command_description: "",
-    target: target
-  )
-}
+#let pageB = command(
+    command-name: "slicer",
+    command-description: "",
+    target-type: dl
+)
 
-#let buttonC(target) = {
-  button(
-    command_name: [#pg("A") beat roll],
-    command_description: "",
-    target: target
-  )
-}
 
-#let buttonD(target) = {
-  button(
-    command_name: [#pg("A") keycue],
-    command_description: "",
-    target: target
-  )
-}
+#let pageC = command(
+    command-name: "beat roll",
+    command-description: "",
+    target-type: dl
+)
 
-#let buttonE(target) = {
-  button(
-    command_name: [#pg("A") hotcues],
-    command_description: "",
-    target: target
-  )
-}
 
-#let buttonF(target) = {
-  button(
-    command_name: [#pg("A") cueloop],
-    command_description: "",
-    target: target
-  )
-}
+#let pageD = command(
+    command-name: "keycue",
+    command-description: "",
+    target-type: dl
+)
 
-// non duplicate buttons
-#let buttonG = blankpage("G") 
 
-#let buttonH = blankpage("I") 
+#let pageE = command(
+    command-name: "hotcues",
+    command-description: "",
+    target-type: dl
+)
 
-#let buttonI = blankpage("H") 
 
-#let buttonJ = blankpage("J") 
+#let pageF = command(
+    command-name: "cueloop",
+    command-description: "",
+    target-type: dl
+)
 
-#let buttonK = blankpage("K") 
-
-#let buttonL = blankpage("L") 
-
-#let buttonM = blankpage("M") 
-
-#let buttonN = blankpage("N") 
-
-#let buttonO = blankpage("O") 
-
-#let buttonP = blankpage("P") 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                  buttons                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-//normal
-#let buttonA_l_normal = buttonA(d13)
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ normal mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// left
+#let buttonA-l-normal = button(
+  command: pageA,
+  target: d13
+)
 
-#let buttonB_l_normal = buttonB(d13)
+#let buttonB-l-normal = button(
+  command: pageB,
+  target: d13
+)
 
-#let buttonC_l_normal = buttonC(d13)
+#let buttonC-l-normal = button(
+  command: pageC,
+  target: d13,
+)
 
-#let buttonD_l_normal = buttonD(d13)
+#let buttonD-l-normal = button(
+  command: pageD,
+  target: d13,
+)
 
-#let buttonE_l_normal = buttonE(d13)
+#let buttonE-l-normal = button(
+  command: pageE,
+  target: d13,
+)
 
-#let buttonF_l_normal = buttonF(d13)
+#let buttonF-l-normal = button(
+  command: pageF,
+  target: d13,
+)
 
-#let buttonG_l_normal = buttonG
+#let buttonG-l-normal = button(
+  command: blankpage("G"),
+  target: unmapped-text,
+)
 
-#let buttonH_l_normal = buttonH
+#let buttonH-l-normal = button(
+  command: blankpage("H"),
+  target: unmapped-text,
+)
 
-#let buttonI_l_normal = buttonI
+#let buttonI-l-normal = button(
+  command: blankpage("I"),
+  target: unmapped-text,
+)
 
-#let buttonJ_l_normal = buttonJ
+#let buttonJ-l-normal = button(
+  command: blankpage("J"),
+  target: unmapped-text,
+)
 
-#let buttonK_l_normal = buttonK
+#let buttonK-l-normal = button(
+  command: blankpage("K"),
+  target: unmapped-text,
+)
 
-#let buttonL_l_normal = buttonL
+#let buttonL-l-normal = button(
+  command: blankpage("L"),
+  target: unmapped-text,
+)
 
-#let buttonM_l_normal = buttonM
+#let buttonM-l-normal = button(
+  command: blankpage("M"),
+  target: unmapped-text,
+)
 
-#let buttonN_l_normal = buttonN
+#let buttonN-l-normal = button(
+  command: blankpage("N"),
+  target: unmapped-text,
+)
 
-#let buttonO_l_normal = buttonO
+#let buttonO-l-normal = button(
+  command: blankpage("O"),
+  target: unmapped-text,
+)
 
-#let buttonP_l_normal = buttonP
+#let buttonP-l-normal = button(
+  command: blankpage("P"),
+  target: unmapped-text,
+)
 
-//shift
+//right
+#let buttonA-r-normal = button(
+  command: pageA,
+  target: d24
+)
 
-#let buttonA_l_shift = shiftdupepagebutton
+#let buttonB-r-normal = button(
+  command: pageB,
+  target: d24
+)
 
-#let buttonB_l_shift = shiftdupepagebutton
+#let buttonC-r-normal = button(
+  command: pageC,
+  target: d24,
+)
 
-#let buttonC_l_shift = shiftdupepagebutton
+#let buttonD-r-normal = button(
+  command: pageD,
+  target: d24,
+)
 
-#let buttonD_l_shift = shiftdupepagebutton
+#let buttonE-r-normal = button(
+  command: pageE,
+  target: d24,
+)
 
-#let buttonE_l_shift = shiftdupepagebutton
+#let buttonF-r-normal = button(
+  command: pageF,
+  target: d24,
+)
 
-#let buttonF_l_shift = shiftdupepagebutton
+#let buttonG-r-normal = button(
+  command: blankpage("G"),
+  target: unmapped-text,
+)
 
-#let buttonG_l_shift = shiftdupepagebutton
+#let buttonH-r-normal = button(
+  command: blankpage("H"),
+  target: unmapped-text,
+)
 
-#let buttonH_l_shift = shiftdupepagebutton
+#let buttonI-r-normal = button(
+  command: blankpage("I"),
+  target: unmapped-text,
+)
 
-#let buttonI_l_shift = shiftdupepagebutton
+#let buttonJ-r-normal = button(
+  command: blankpage("J"),
+  target: unmapped-text,
+)
 
-#let buttonJ_l_shift = shiftdupepagebutton
+#let buttonK-r-normal = button(
+  command: blankpage("K"),
+  target: unmapped-text,
+)
 
-#let buttonK_l_shift = shiftdupepagebutton
+#let buttonL-r-normal = button(
+  command: blankpage("L"),
+  target: unmapped-text,
+)
 
-#let buttonL_l_shift = shiftdupepagebutton
+#let buttonM-r-normal = button(
+  command: blankpage("M"),
+  target: unmapped-text,
+)
 
-#let buttonM_l_shift = shiftdupepagebutton
+#let buttonN-r-normal = button(
+  command: blankpage("N"),
+  target: unmapped-text,
+)
 
-#let buttonN_l_shift = shiftdupepagebutton
+#let buttonO-r-normal = button(
+  command: blankpage("O"),
+  target: unmapped-text,
+)
 
-#let buttonO_l_shift = shiftdupepagebutton
+#let buttonP-r-normal = button(
+  command: blankpage("P"),
+  target: unmapped-text,
+)
 
-#let buttonP_l_shift = shiftdupepagebutton
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shift mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// left
+#let buttonA-l-shift = same-button
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/*                               page contents                                */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#vershiftlayout(
+#let buttonB-l-shift = same-button
 
+#let buttonC-l-shift = same-button
+
+#let buttonD-l-shift = same-button
+
+#let buttonE-l-shift = same-button
+
+#let buttonF-l-shift = same-button
+
+#let buttonG-l-shift = same-button
+
+#let buttonH-l-shift = same-button
+
+#let buttonI-l-shift = same-button
+
+#let buttonJ-l-shift = same-button
+
+#let buttonK-l-shift = same-button
+
+#let buttonL-l-shift = same-button
+
+#let buttonM-l-shift = same-button
+
+#let buttonN-l-shift = same-button
+
+#let buttonO-l-shift = same-button
+
+#let buttonP-l-shift = same-button
+
+//right
+#let buttonA-r-shift = same-button
+
+#let buttonB-r-shift = same-button
+
+#let buttonC-r-shift = same-button
+
+#let buttonD-r-shift = same-button
+
+#let buttonE-r-shift = same-button
+
+#let buttonF-r-shift = same-button
+
+#let buttonG-r-shift = same-button
+
+#let buttonH-r-shift = same-button
+
+#let buttonI-r-shift = same-button
+
+#let buttonJ-r-shift = same-button
+
+#let buttonK-r-shift = same-button
+
+#let buttonL-r-shift = same-button
+
+#let buttonM-r-shift = same-button
+
+#let buttonN-r-shift = same-button
+
+#let buttonO-r-shift = same-button
+
+#let buttonP-r-shift = same-button
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ page contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#lrk2-vertshift-layout(
   buttonmatrixlayout(
-    buttonA_l_normal,
-    buttonB_l_normal,
-    buttonC_l_normal,
-    buttonD_l_normal,
-    buttonE_l_normal,
-    buttonF_l_normal,
-    buttonG_l_normal,
-    buttonH_l_normal,
-    buttonI_l_normal,
-    buttonJ_l_normal,
-    buttonK_l_normal,
-    buttonL_l_normal,
-    buttonM_l_normal,
-    buttonN_l_normal,
-    buttonO_l_normal,
-    buttonP_l_normal,
+    buttonA-l-normal,
+    buttonB-l-normal,
+    buttonC-l-normal,
+    buttonD-l-normal,
+    buttonE-l-normal,
+    buttonF-l-normal,
+    buttonG-l-normal,
+    buttonH-l-normal,
+    buttonI-l-normal,
+    buttonJ-l-normal,
+    buttonK-l-normal,
+    buttonL-l-normal,
+    buttonM-l-normal,
+    buttonN-l-normal,
+    buttonO-l-normal,
+    buttonP-l-normal,
   ),
 
   buttonmatrixlayout(
-    buttonA_l_shift,
-    buttonB_l_shift,
-    buttonC_l_shift,
-    buttonD_l_shift,
-    buttonE_l_shift,
-    buttonF_l_shift,
-    buttonG_l_shift,
-    buttonH_l_shift,
-    buttonI_l_shift,
-    buttonJ_l_shift,
-    buttonK_l_shift,
-    buttonL_l_shift,
-    buttonM_l_shift,
-    buttonN_l_shift,
-    buttonO_l_shift,
-    buttonP_l_shift,
+    buttonA-r-normal,
+    buttonB-r-normal,
+    buttonC-r-normal,
+    buttonD-r-normal,
+    buttonE-r-normal,
+    buttonF-r-normal,
+    buttonG-r-normal,
+    buttonH-r-normal,
+    buttonI-r-normal,
+    buttonJ-r-normal,
+    buttonK-r-normal,
+    buttonL-r-normal,
+    buttonM-r-normal,
+    buttonN-r-normal,
+    buttonO-r-normal,
+    buttonP-r-normal,
+  ),
+
+  buttonmatrixlayout(
+    buttonA-l-shift,
+    buttonB-l-shift,
+    buttonC-l-shift,
+    buttonD-l-shift,
+    buttonE-l-shift,
+    buttonF-l-shift,
+    buttonG-l-shift,
+    buttonH-l-shift,
+    buttonI-l-shift,
+    buttonJ-l-shift,
+    buttonK-l-shift,
+    buttonL-l-shift,
+    buttonM-l-shift,
+    buttonN-l-shift,
+    buttonO-l-shift,
+    buttonP-l-shift,
+  ),
+
+  buttonmatrixlayout(
+    buttonA-r-shift,
+    buttonB-r-shift,
+    buttonC-r-shift,
+    buttonD-r-shift,
+    buttonE-r-shift,
+    buttonF-r-shift,
+    buttonG-r-shift,
+    buttonH-r-shift,
+    buttonI-r-shift,
+    buttonJ-r-shift,
+    buttonK-r-shift,
+    buttonL-r-shift,
+    buttonM-r-shift,
+    buttonN-r-shift,
+    buttonO-r-shift,
+    buttonP-r-shift,
   )
 )
