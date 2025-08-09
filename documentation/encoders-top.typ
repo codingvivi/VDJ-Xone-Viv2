@@ -188,7 +188,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-= Top encoder section
+=== Top encoder section
 #layout-encoder-top-full(
   enc-top-1-l-normal,
   enc-top-2-l-normal,

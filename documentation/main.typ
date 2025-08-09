@@ -14,23 +14,20 @@
 
 = Setup
   _to write_
-#pagebreak()
+//#pagebreak()
 
 = Controls
 #include "layout-basics.typ"
 
 == Non-layered inputs
-#set heading(offset: 2)
 #include "encoders-top.typ"
 //  #include "knobbuttons-left.typ"
 //  #include "knobbuttons-right.typ"
 //  #include "faders.typ"
 //  #include "encoders-bottom.typ"
 #pagebreak()
-#set heading(offset: 0)
 
 == Button matrix pages
-#set heading(offset: 2)
 #include "pageLayer.typ"
 #include "pageA.typ"
 //#include "pageB.typ"
@@ -49,4 +46,3 @@
 //#include "pageO.typ"
 //#include "pageP.typ"
 #pagebreak()
-#set heading(offset: 0)

@@ -45,10 +45,9 @@ WIP
 ## Manual
 Found [here](documentation/VDJ-XoneViv2-Manual.pdf). 
 
-Created with [Typst](https://typst.app), 
-meaning that anyone can pretty easily adjust the templating I created for this
-to document their own edit of this mapping.
-Also means that it is incredibly easy to batch create/update documentation
-for what ends up being a lot of duplicate commands and inputs 
-(it's just the same stuff across 4 decks!).
+Since it's generated using [Typst](https://typst.app), 
+anyone who wants to edit this mapping to their liking
+can easily render their own manual 
+while they're at it it.
+
 

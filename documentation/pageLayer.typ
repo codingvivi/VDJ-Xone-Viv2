@@ -291,7 +291,7 @@
 #let buttonP-r-shift = same-button
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ page contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-= Layer Page
+=== Layer Page <layers>
 #lrk2-vertshift-layout(
   buttonmatrixlayout(
     buttonA-l-normal, buttonB-l-normal, buttonC-l-normal, buttonD-l-normal,
