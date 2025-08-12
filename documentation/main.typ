@@ -12,12 +12,9 @@
 #outline(depth: 4)
 #pagebreak()
 
-= Setup
-  _to write_
-//#pagebreak()
-
+#include "setup.typ"
 = Controls
-#include "layout-basics.typ"
+#include "layout-overview.typ"
 
 == Non-layered inputs
 #include "encoders-top.typ"
@@ -45,4 +42,6 @@
 //#include "pageN.typ"
 //#include "pageO.typ"
 //#include "pageP.typ"
-#pagebreak()
+//#pagebreak()
+
+//= Manual creation
