@@ -14,10 +14,14 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-=== Page B
+=== Page B - Slicer
 
 #dupebuttonmatrix(
+  
+  //normal mode pad
   create-pad-set(slicer-pad),
+
+    //shift mode pad
   create-duplicate-set(same-command)
 )
 

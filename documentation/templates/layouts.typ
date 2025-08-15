@@ -58,26 +58,6 @@
 // for pad commands, 
 // this creates an array
 // to be passed to the buttonmatrixlayout function
-#let create-pad-array(pad-command) = {
-
-  let return-array = ()
-
-  for value in range(8) {
-
-    let pad-number = str(value + 1)
-
-    let value = command(
-      command-name: pad-command.command-name + " " + pad-number,
-      command-description: pad-command.command-description,
-      LED: pad-command.LED,
-    )
-
-    return-array.push(value)
-  }
-
-  return-array
-
-}
 
 
 #let buttonmatrixlayout(..buttons) = {

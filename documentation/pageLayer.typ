@@ -291,7 +291,14 @@
 #let buttonP-r-shift = same-button
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ page contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-=== Layer Page <layers>
+=== Layer Page - Menu <layers>
+
+Pressing the layer button on any of the other pages 
+takes you to this page. 
+Pushing any of the switches
+A-P
+takes the user to the switch's associated page of commands.
+
 #lrk2-vertshift-layout(
   buttonmatrixlayout(
     buttonA-l-normal, buttonB-l-normal, buttonC-l-normal, buttonD-l-normal,
