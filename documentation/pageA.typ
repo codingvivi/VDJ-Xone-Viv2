@@ -95,7 +95,7 @@
   ),
   (
     beginning, mastertempo, editgrid, load,
-    unmapped-command, unmapped-command, unmapped-command, unmapped-command
+    same-command, same-command, same-command,same-command
   )
 )
 

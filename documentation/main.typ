@@ -13,6 +13,7 @@
 #pagebreak()
 
 #include "setup.typ"
+
 = Controls
 #include "layout-overview.typ"
 
@@ -27,7 +28,7 @@
 == Button matrix pages
 #include "pageLayer.typ"
 #include "pageA.typ"
-//#include "pageB.typ"
+#include "pageB.typ"
 //#include "pageC.typ"
 //#include "pageD.typ"
 //#include "pageE.typ"

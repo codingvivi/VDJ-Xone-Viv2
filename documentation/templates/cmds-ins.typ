@@ -5,17 +5,54 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let command(
   page-name: none,
+  command-type: "command",
   command-name: str, 
   command-description: none, 
   target-type: str,
   LED: none,
 ) = (
   page-name:page-name,
+  command-type: command-type,
   command-name: command-name,
   command-description:command-description,
   target-type: target-type,
   LED: LED,
 )
+
+#let pad-command(
+  page-name: none,
+  command-name: str, 
+  command-description: none, 
+  target-type: str,
+  LED: none,
+) = command(
+  page-name:page-name,
+  command-type: "pad",
+  command-name: command-name,
+  command-description:command-description,
+  target-type: target-type,
+  LED: LED,
+)
+
+#let pad-command-old(
+  command-name: str,
+  command-description: none,
+  LED: none
+) = {
+
+  return-dict = (:)
+
+  for value in range(8) {
+    let key = "pad" + str(value)
+    let value = command(
+      command-name: command-name + " " + str(value),
+      command-description: command-description,
+      LED: LED,
+    )
+
+    returndict.insert(key, value)
+  }
+}
 
 #let unmapped-command = command(
   command-name: unmapped-text,
@@ -31,6 +68,36 @@
   LED: none,
 )
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ command dulication ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let create-pad-set(pad-command) = {
+
+  let return-array = ()
+
+  for value in range(8) {
+
+    let pad-number = str(value + 1)
+
+    let value = command(
+      command-name: pad-command.command-name + " " + pad-number,
+      command-description: pad-command.command-description,
+      LED: pad-command.LED,
+    )
+
+    return-array.push(value)
+  }
+
+  return-array
+
+}
+
+#let create-duplicate-set(cmd) = {
+  let return-array = ()
+
+  for value in range(8) {
+    return-array.push(cmd)
+  }
+  return-array
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                   inputs                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -87,4 +154,5 @@
   )  
   fulldict
 }
+
 

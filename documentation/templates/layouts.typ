@@ -55,6 +55,31 @@
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ cell groupings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// for pad commands, 
+// this creates an array
+// to be passed to the buttonmatrixlayout function
+#let create-pad-array(pad-command) = {
+
+  let return-array = ()
+
+  for value in range(8) {
+
+    let pad-number = str(value + 1)
+
+    let value = command(
+      command-name: pad-command.command-name + " " + pad-number,
+      command-description: pad-command.command-description,
+      LED: pad-command.LED,
+    )
+
+    return-array.push(value)
+  }
+
+  return-array
+
+}
+
+
 #let buttonmatrixlayout(..buttons) = {
   //.pos creates array of all positional arguments
   //.map creates array transformed with function passed
@@ -81,7 +106,7 @@
   ) 
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ control groupings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#let controlgrouping(title: "", controls) = {
+#let controlgrouping(title: "", framecolor: none, controls) = {
   set text(
     size: 8.5pt,
   )
@@ -96,12 +121,19 @@
         title
       )
     },
-    controls
+    grid.cell( 
+//      stroke: framecolor,
+      controls
     )
+  )
 }
 
 #let verticalgroupingpair(
-  layouttitle:"", topcntrls, toptitle, bottomcntrls, bottomtitle
+  layouttitle:"",
+  topcntrls,
+  toptitle,
+  bottomcntrls,
+  bottomtitle
 ) = {
   grid(
     if layouttitle != ""{
@@ -116,7 +148,15 @@
   )
 }
 
-#let horizontalgroupingpair(layouttitle: "", ltitle, lcntrls, rtitle, rcntrls,) = {
+#let horizontalgroupingpair(
+  layouttitle: "",
+  upperframecolor:none,
+  lowerframecolor:none,
+  ltitle,
+  lcntrls,
+  rtitle,
+  rcntrls
+) = {
   grid(
     if layouttitle != ""{
       //align(center)[#heading(level:4, layouttitle)]
@@ -125,8 +165,8 @@
     grid(
       columns: (49%, 49%),
       gutter: 10pt,
-      controlgrouping(title: ltitle, lcntrls),
-      controlgrouping(title: rtitle, rcntrls)
+      controlgrouping(framecolor: upperframecolor, title: ltitle, lcntrls),
+      controlgrouping(framecolor: lowerframecolor, title: rtitle, rcntrls)
     )
   )
 }
@@ -142,12 +182,16 @@
 ) = {
 
   horizontalgroupingpair(
+    upperframecolor: deck1-color,
+    lowerframecolor: deck3-color,
     layouttitle: heading-section-1, 
     heading-l-1, l-1-cntrls, 
     heading-r-1, r-1-cntrls
   )
 
   horizontalgroupingpair(
+    upperframecolor: deck2-color,
+    lowerframecolor: deck4-color,
     layouttitle: heading-section-2,
     heading-l-2, l-2-cntrls,
     heading-r-2, r-2-cntrls
@@ -195,7 +239,16 @@
   let createbutton(cmd, deck) = {
     let returnbutton = button(
       command: cmd,
-      target: deck
+      target: {
+        if cmd == unmapped-command {
+          unmapped-text
+        } 
+        if cmd == same-command {
+          same-text 
+        } else {
+          deck
+        }
+      }
     )
     returnbutton
   }
@@ -224,3 +277,7 @@
     buttonmatrixlayout(..right-shift-commands)
   )
 }
+
+
+
+

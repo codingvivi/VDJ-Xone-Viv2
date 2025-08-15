@@ -79,17 +79,17 @@ etc).
 #let leftboxstyling = boxstyling(
     side:"left", 
     upper-deck: d1, 
-    upper-fill:rgb("33b0ff"),
+    upper-fill: deck1-color,
     lower-deck: d3,
-    lower-fill: rgb("08bdba")
-)
+    lower-fill: deck3-color,
+  )
 
 #let rightboxstyling = (
   side:"right", 
   upper-deck: d2, 
-  upper-fill:rgb("ee5296"),
+  upper-fill: deck2-color,
   lower-deck: d4,
-  lower-fill: rgb("ffb784")
+  lower-fill: deck4-color,
 )
 
 
@@ -176,7 +176,7 @@ With the exception of the stem EQ,
 controls targeting individual decks are split across the two controllers.
 
 #figure(
-  image("layoutVDJcut.png")
+  image("layoutVDJcut.png", fit: "cover")
 )
 
 #grid(
@@ -204,6 +204,8 @@ instead of being lined up in columns horizontally like in most other mappings.
   columns: (48%, 48%),
   rows: 86pt,
   gutter: 1%,
+
+
 
   encoderlayoutfigures(
     leftboxstyling
