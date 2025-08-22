@@ -1,3 +1,4 @@
+
 # Xone Viv2 - A 2x2 deck, hybrid setup VDJ mapping
 
 The mapping I use for my 2 K2s with VirtualDJ.
@@ -13,30 +14,23 @@ WIP.
 
 ### 16 pages of functionality
 
-instead of using the mode button to cycle through 3 mere pages,
-it shows a menu page
-with buttons A-P representing a sub-menu each.
+The functionality of the latch layer button
+has been reworked from the ground up.
+It accesses a menu page where
+where buttons A-P represent a sub-menu each.
 This means 16 pages in total,
-some still assignable.
-The shift button could allow for 16 more.
+some still unmapped.
+This means all of the LED colors 
+are available as well!
 
-### Consistent, square deck control layout
+### Consistent, non mirrored deck control layout
 
-The deck control pages of each of the controllers
-controls 2 decks.
 Decks are laid out vertically,
-exactly like they are shown in Virtual DJ.
-Side by side the arrangement is:
+exactly like they are shown in Virtual DJ
+to reduce mental overhead
+and misinputs.
 
-| Left K2 | Right K2 |
-| ------- | -------- |
-| Deck 1  | Deck 2   |
-| Deck 3  | Deck 4   |
-
-Furthermore,
-deck controls themselves are not mirrored
-(like they would be with VirtualDJ's automatic deck assignment).
-This reduces mental overhead and missinputs.
+![decklayout](documentation/screenshot_layout_full.png)
 
 ### Extensive track browser filtering
 
@@ -49,5 +43,6 @@ Since it's generated using [Typst](https://typst.app),
 anyone who wants to edit this mapping to their liking
 can easily render their own manual 
 while they're at it it.
+
 
 

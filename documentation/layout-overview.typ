@@ -175,45 +175,53 @@ etc).
 With the exception of the stem EQ, 
 controls targeting individual decks are split across the two controllers.
 
-#figure(
-  image("layoutVDJcut.png", fit: "cover")
-)
+#align(
+  center,
+  {
+    figure(
+      image("layoutVDJcut.png", fit: "cover")
+    )
 
-#grid(
-  columns: (48%, 48%),
-  rows: 111pt, // needs to be set for place to behave
-  gutter: 1%,
-  //stroke: red,
-  matrixlayoutfigures(
-   leftboxstyling
-  ),
+    grid(
+      columns: (48%, 48%),
+      rows: 111pt, // needs to be set for place to behave
+      gutter: 1%,
+      //stroke: red,
+      matrixlayoutfigures(
+       leftboxstyling
+      ),
 
-  matrixlayoutfigures(
-   rightboxstyling
-  ),
+      matrixlayoutfigures(
+       rightboxstyling
+      ),
+    )
+  }
 )
-#v(0.5em)
+  #v(0.5em)
 
 The arrangement mimics the way decks are shown in performance mode
 within VirtualDJ.
 Deck controls are thus "stacked" vertically, 
 instead of being lined up in columns horizontally like in most other mappings.
 
+#align(
+  center,
+  grid(
+    columns: (48%, 48%),
+    rows: 86pt,
+    gutter: 1%,
 
-#grid(
-  columns: (48%, 48%),
-  rows: 86pt,
-  gutter: 1%,
 
 
-
-  encoderlayoutfigures(
-    leftboxstyling
-  ),
-  encoderlayoutfigures(
-   rightboxstyling
-  ),
+    encoderlayoutfigures(
+      leftboxstyling
+    ),
+    encoderlayoutfigures(
+     rightboxstyling
+    ),
+  )
 )
+
 #v(0.5em)
 
 The upper encoder section has the "top" deck on the left 
