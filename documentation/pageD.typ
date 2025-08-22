@@ -9,7 +9,7 @@
 #let keycue = pad-command(
   command-name: "keycue pad", 
   command-description: none, 
-  target-type: dl,
+  target: decklocal,
   LED: none,
 )
 
@@ -25,7 +25,7 @@
   create-pad-set(keycue),
   
   //shift mode pad
-  create-duplicate-set(same-command)
+  create-duplicate-set(sameInShift-command)
  // create-padpset(padname),
 )
 

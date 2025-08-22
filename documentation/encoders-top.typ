@@ -7,42 +7,42 @@
 #let jump-long = command(
   command-name: "jump long",
   command-description: none,
-  target-type: dl,
+  target: decklocal,
   LED: none,
 )
 
 #let jump-short = command(
   command-name: "jump short",
   command-description: none,
-  target-type: dl,
+  target: decklocal,
   LED: none,
 )
 
 #let change-jump-length = command(
   command-name: "jump length",
   command-description: none,
-  target-type: dg,
+  target: global,
   LED: none,
 )
 
 #let set-loop = command(
   command-name: "set loop",
   command-description: none,
-  target-type: dl,
+  target: decklocal,
   LED: none,
 )
 
 #let change-loop-length = command(
   command-name: "loop size",
   command-description: none,
-  target-type: dl,
+  target: decklocal,
   LED: none,
 )
 
 #let move-loop = command(
   command-name: "move loop",
   command-description: none,
-  target-type: dl,
+  target: decklocal,
   LED: none,
 )
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -52,119 +52,119 @@
 //left side
 #let enc-top-1-l-normal = encoder(
   command-push: change-jump-length,
-  target-push: dg,
+  target-push: global,
   command-turn: jump-long,
-  target-turn: d1
+  target-turn: deck1
 )
 
 #let enc-top-2-l-normal = encoder(
   command-push: set-loop,
-  target-push: d1,
+  target-push: deck1,
   command-turn: change-loop-length,
-  target-turn: d1
+  target-turn: deck1
 )
 
 #let enc-top-3-l-normal = encoder(
   command-push: unmapped-command,
-  target-push: unmapped-text,
+  target-push: unmapped-target,
   command-turn: jump-long,
-  target-turn: d3
+  target-turn: deck3
 )
 
 #let enc-top-4-l-normal = encoder(
   command-push: set-loop,
-  target-push: d3,
+  target-push: deck3,
   command-turn: change-loop-length,
-  target-turn: d3
+  target-turn: deck3
 )
 
 //right side
 #let enc-top-1-r-normal = encoder(
   command-push: unmapped-command,
-  target-push: unmapped-text,
+  target-push: unmapped-target,
   command-turn: jump-long,
-  target-turn: d2
+  target-turn: deck2
 )
 
 #let enc-top-2-r-normal = encoder(
   command-push: set-loop,
-  target-push: d2,
+  target-push: deck2,
   command-turn: change-loop-length,
-  target-turn: d2
+  target-turn: deck2
 )
 
 #let enc-top-3-r-normal = encoder(
   command-push: unmapped-command,
-  target-push: unmapped-text,
+  target-push: unmapped-target,
   command-turn: jump-long,
-  target-turn: d4
+  target-turn: deck4
 )
 
 #let enc-top-4-r-normal = encoder(
   command-push: set-loop,
-  target-push: d4,
+  target-push: deck4,
   command-turn: change-loop-length,
-  target-turn: d4
+  target-turn: deck4
 )
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shift mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 //left side
 #let enc-top-1-l-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: jump-short,
-  target-turn: d1
+  target-turn: deck1
 )
 
 #let enc-top-2-l-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: move-loop,
-  target-turn: d1
+  target-turn: deck1
 )
 
 #let enc-top-3-l-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: jump-short,
-  target-turn: d3
+  target-turn: deck3
 )
 
 #let enc-top-4-l-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: move-loop,
-  target-turn: d3
+  target-turn: deck3
 )
 
 //right side
 #let enc-top-1-r-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: jump-short,
-  target-turn: d2
+  target-turn: deck2
 )
 
 #let enc-top-2-r-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: move-loop,
-  target-turn: d2
+  target-turn: deck2
 )
 
 #let enc-top-3-r-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: jump-short,
-  target-turn: d4
+  target-turn: deck4
 )
 
 #let enc-top-4-r-shift = encoder(
-  command-push: same-command,
-  target-push: same-text,
+  command-push: sameInShift-command,
+  target-push: sameInShift-target,
   command-turn: move-loop,
-  target-turn: d4
+  target-turn: deck4
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

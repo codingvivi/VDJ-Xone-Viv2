@@ -33,10 +33,23 @@
 
       // command-line
       input.command.page-name,
-      input.command.command-name,
-      text(size: 7.4pt,)[_#input.target _]
+      text(
+        fill: {
+          let name = input.command.command-name
+
+          if name == unmapped-text or name == sameInShift-text{
+            emptygray
+          } else {
+            textcolor
+          }
+
+        },
+        input.command.command-name
+
+      ),
+      text(size: 7.4pt,fill: input.target.color)[#input.target.name]
+      )
     )
-  )
 }    
   
 
@@ -66,7 +79,7 @@
   // each value gets stuck into btn
   let cells = buttons.pos().map(btn => cellayout(btn))
   grid(
-    columns: (25%,25%,25%,25%,),
+    columns: (4fr, 4fr, 4fr, 4fr),
     row-gutter: 7pt,
     align: center,
 
@@ -143,7 +156,7 @@
       heading(level:4, layouttitle)
     },
     grid(
-      columns: (49%, 49%),
+      columns: (2fr, 2fr),
       gutter: 10pt,
       controlgrouping(framecolor: upperframecolor, title: ltitle, lcntrls),
       controlgrouping(framecolor: lowerframecolor, title: rtitle, rcntrls)
@@ -162,21 +175,26 @@
 ) = {
 
   horizontalgroupingpair(
-    upperframecolor: deck1-color,
-    lowerframecolor: deck3-color,
+    upperframecolor: deck1.color,
+    lowerframecolor: deck3.color,
     layouttitle: heading-section-1, 
     heading-l-1, l-1-cntrls, 
     heading-r-1, r-1-cntrls
   )
 
   horizontalgroupingpair(
-    upperframecolor: deck2-color,
-    lowerframecolor: deck4-color,
+    upperframecolor: deck2.color,
+    lowerframecolor: deck4.color,
     layouttitle: heading-section-2,
     heading-l-2, l-2-cntrls,
     heading-r-2, r-2-cntrls
   )
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                           description templates                            */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let descriptionsection(commandarray) = ()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                              layout templates                              */
@@ -221,10 +239,10 @@
       command: cmd,
       target: {
         if cmd == unmapped-command {
-          unmapped-text
+          unmapped-target
         } 
-        if cmd == same-command {
-          same-text 
+        if cmd == sameInShift-command {
+          sameInShift-target
         } else {
           deck
         }
@@ -233,15 +251,15 @@
     returnbutton
   }
 
-  let d1-n-buttons = normal-commands.map(cmd => createbutton(cmd, d1))
-  let d2-n-buttons = normal-commands.map(cmd => createbutton(cmd, d2))
-  let d3-n-buttons = normal-commands.map(cmd => createbutton(cmd, d3))
-  let d4-n-buttons = normal-commands.map(cmd => createbutton(cmd, d4))
+  let d1-n-buttons = normal-commands.map(cmd => createbutton(cmd, deck1))
+  let d2-n-buttons = normal-commands.map(cmd => createbutton(cmd, deck2))
+  let d3-n-buttons = normal-commands.map(cmd => createbutton(cmd, deck3))
+  let d4-n-buttons = normal-commands.map(cmd => createbutton(cmd, deck4))
 
-  let d1-s-buttons = shift-commands.map(cmd => createbutton(cmd, d1))
-  let d2-s-buttons = shift-commands.map(cmd => createbutton(cmd, d2))
-  let d3-s-buttons = shift-commands.map(cmd => createbutton(cmd, d3))
-  let d4-s-buttons = shift-commands.map(cmd => createbutton(cmd, d4))
+  let d1-s-buttons = shift-commands.map(cmd => createbutton(cmd, deck1))
+  let d2-s-buttons = shift-commands.map(cmd => createbutton(cmd, deck2))
+  let d3-s-buttons = shift-commands.map(cmd => createbutton(cmd, deck3))
+  let d4-s-buttons = shift-commands.map(cmd => createbutton(cmd, deck4))
 
   let left-normal-commands = (d1-n-buttons + d3-n-buttons)
   let right-normal-commands = (d2-n-buttons+ d4-n-buttons)
@@ -249,12 +267,32 @@
   let left-shift-commands = (d1-s-buttons + d3-s-buttons)
   let right-shift-commands = (d2-s-buttons + d4-s-buttons)
 
-  lrk2-vertshift-layout(
-    buttonmatrixlayout(..left-normal-commands),
-    buttonmatrixlayout(..right-normal-commands),
 
-    buttonmatrixlayout(..left-shift-commands),
-    buttonmatrixlayout(..right-shift-commands)
+  let matrix-image-overlay(buttonmatrixlayout) = block(
+    {
+      image(
+        width: 109%,
+        "../K2-switch-matrix.svg"
+      )
+      place(
+        center + horizon,
+        buttonmatrixlayout
+    )}
+  )
+
+  lrk2-vertshift-layout(
+
+      buttonmatrixlayout(..left-normal-commands),
+      buttonmatrixlayout(..right-normal-commands),
+
+      buttonmatrixlayout(..left-shift-commands),
+      buttonmatrixlayout(..right-shift-commands),
+
+      //matrix-image-overlay(buttonmatrixlayout(..left-normal-commands)),
+      //matrix-image-overlay(buttonmatrixlayout(..right-normal-commands)),
+
+      //matrix-image-overlay(buttonmatrixlayout(..left-shift-commands)),
+      //matrix-image-overlay(buttonmatrixlayout(..right-shift-commands)),
   )
 }
 

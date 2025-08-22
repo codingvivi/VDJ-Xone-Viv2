@@ -8,11 +8,28 @@
 
 #let hotcue = pad-command(
   command-name: "hotcue", 
-  command-description: none, 
-  target-type: dl,
+  command-description: [
+    Recalls accordingly numbered hotcue
+    or,
+    if it doesn't exist,
+    stores hotcue
+    at the current play marker location.
+  ],
+  target: decklocal,
   LED: none,
 )
 
+#let deletehotcue = pad-command(
+
+  command-name: "delete hc", 
+  command-description: [
+    Deletes stored hotcue of according number,
+    if it exists
+  ],
+  target: decklocal,
+  LED: none,
+
+)
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
@@ -25,8 +42,8 @@
   create-pad-set(hotcue),
 
   //shift mode pad
-  create-duplicate-set(same-command)
-  //create-padpset(padname),
+  //create-duplicate-set(same-command)
+  create-pad-set(deletehotcue),
 )
 
 #pagebreak()

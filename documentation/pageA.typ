@@ -9,79 +9,79 @@
 #let play = command(
     command-name: "Play",
     command-description: "",
-    target-type: dl,
+    target: decklocal,
 )
 
 
 #let cue = command(
     command-name: "Cue",
     command-description: "",
-    target-type: dl,
+    target: decklocal,
 )
 
 
 #let sync = command(
     command-name: "Sync",
     command-description: "",
-    target-type: dl,
+    target: decklocal,
 )
 
 
 #let setmaster = command(
     command-name: "Set master",
     command-description: "",
-    target-type: dl,
+    target: decklocal,
 )
 
 
 #let nudgef = command(
     command-name: "nudge >",
     command-description: "",
-    target-type: dl,
+    target: decklocal,
 )
 
 
 #let nudgeb = command(
     command-name: "< nudge",
     command-description: "",
-    target-type: dl,
+    target: decklocal,
 )
 
 
 #let slip = command(
   command-name: "slip",
   command-description: "",
-  target-type: dl
+  target: decklocal
 )
 
 #let reverse = command(
   command-name: "reverse",
   command-description: "",
-  target-type: dl,
+  target: decklocal,
 )
 
 #let beginning = command(
   command-name: "jump start",
   command-description: "",
-  target-type: dl,
+  target: decklocal,
 )
 
 #let editgrid = command(
   command-name: "edit grid",
   command-description: "",
-  target-type: dl,
+  target: decklocal,
 )
 
 #let load = command(
   command-name: "load track",
   command-description: "",
-  target-type: dl,
+  target: decklocal,
 )
 
 #let mastertempo = command(
   command-name: "master tempo",
   command-description: "",
-  target-type: dl,
+  target: decklocal,
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -95,7 +95,7 @@
   ),
   (
     beginning, mastertempo, editgrid, load,
-    same-command, same-command, same-command,same-command
+    sameInShift-command, sameInShift-command, sameInShift-command,sameInShift-command
   )
 )
 

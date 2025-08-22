@@ -9,7 +9,7 @@
 #let looproll = pad-command(
   command-name: "loop roll pad", 
   command-description: none, 
-  target-type: dl,
+  target: decklocal,
   LED: none,
 
 )
@@ -26,7 +26,7 @@
   create-pad-set(looproll),
 
   //shift mode pad
-  create-duplicate-set(same-command)
+  create-duplicate-set(sameInShift-command)
  // create-padpset(padname),
 )
 

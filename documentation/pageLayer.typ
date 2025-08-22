@@ -11,49 +11,49 @@
 #let blankpage(letter) = command(
     command-name:  text(fill: rgb("#aaaaaa"), "blank page"),
     command-description:"", 
-    target-type: unmapped-text,
+    target: unmapped-target,
     LED: none
 )
 
 #let pageA = command(
     command-name: "A: play cntrl",
     command-description: "",
-    target-type: dl
+    target: decklocal
 )
 
 
 #let pageB = command(
     command-name: "B: slicer",
     command-description: "",
-    target-type: dl
+    target: decklocal
 )
 
 
 #let pageC = command(
     command-name: "C: beat roll",
     command-description: "",
-    target-type: dl
+    target: decklocal
 )
 
 
 #let pageD = command(
     command-name: "D: keycue",
     command-description: "",
-    target-type: dl
+    target: decklocal
 )
 
 
 #let pageE = command(
     command-name: "E: hotcues",
     command-description: "",
-    target-type: dl
+    target: decklocal
 )
 
 
 #let pageF = command(
     command-name: "F: cueloop",
     command-description: "",
-    target-type: dl
+    target: decklocal
 )
 
 
@@ -64,235 +64,235 @@
 // left
 #let buttonA-l-normal = button(
   command: pageA,
-  target: d13
+  target: deck13
 )
 
 #let buttonB-l-normal = button(
   command: pageB,
-  target: d13
+  target: deck13
 )
 
 #let buttonC-l-normal = button(
   command: pageC,
-  target: d13,
+  target: deck13,
 )
 
 #let buttonD-l-normal = button(
   command: pageD,
-  target: d13,
+  target: deck13,
 )
 
 #let buttonE-l-normal = button(
   command: pageE,
-  target: d13,
+  target: deck13,
 )
 
 #let buttonF-l-normal = button(
   command: pageF,
-  target: d13,
+  target: deck13,
 )
 
 #let buttonG-l-normal = button(
   command: blankpage("G"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonH-l-normal = button(
   command: blankpage("H"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonI-l-normal = button(
   command: blankpage("I"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonJ-l-normal = button(
   command: blankpage("J"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonK-l-normal = button(
   command: blankpage("K"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonL-l-normal = button(
   command: blankpage("L"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonM-l-normal = button(
   command: blankpage("M"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonN-l-normal = button(
   command: blankpage("N"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonO-l-normal = button(
   command: blankpage("O"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonP-l-normal = button(
   command: blankpage("P"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 //right
 #let buttonA-r-normal = button(
   command: pageA,
-  target: d24
+  target: deck24
 )
 
 #let buttonB-r-normal = button(
   command: pageB,
-  target: d24
+  target: deck24
 )
 
 #let buttonC-r-normal = button(
   command: pageC,
-  target: d24,
+  target: deck24,
 )
 
 #let buttonD-r-normal = button(
   command: pageD,
-  target: d24,
+  target: deck24,
 )
 
 #let buttonE-r-normal = button(
   command: pageE,
-  target: d24,
+  target: deck24,
 )
 
 #let buttonF-r-normal = button(
   command: pageF,
-  target: d24,
+  target: deck24,
 )
 
 #let buttonG-r-normal = button(
   command: blankpage("G"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonH-r-normal = button(
   command: blankpage("H"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonI-r-normal = button(
   command: blankpage("I"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonJ-r-normal = button(
   command: blankpage("J"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonK-r-normal = button(
   command: blankpage("K"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonL-r-normal = button(
   command: blankpage("L"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonM-r-normal = button(
   command: blankpage("M"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonN-r-normal = button(
   command: blankpage("N"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonO-r-normal = button(
   command: blankpage("O"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 #let buttonP-r-normal = button(
   command: blankpage("P"),
-  target: unmapped-text,
+  target: unmapped-target,
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ shift mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // left
-#let buttonA-l-shift = same-button
+#let buttonA-l-shift = sameInShift-button
 
-#let buttonB-l-shift = same-button
+#let buttonB-l-shift = sameInShift-button
 
-#let buttonC-l-shift = same-button
+#let buttonC-l-shift = sameInShift-button
 
-#let buttonD-l-shift = same-button
+#let buttonD-l-shift = sameInShift-button
 
-#let buttonE-l-shift = same-button
+#let buttonE-l-shift = sameInShift-button
 
-#let buttonF-l-shift = same-button
+#let buttonF-l-shift = sameInShift-button
 
-#let buttonG-l-shift = same-button
+#let buttonG-l-shift = sameInShift-button
 
-#let buttonH-l-shift = same-button
+#let buttonH-l-shift = sameInShift-button
 
-#let buttonI-l-shift = same-button
+#let buttonI-l-shift = sameInShift-button
 
-#let buttonJ-l-shift = same-button
+#let buttonJ-l-shift = sameInShift-button
 
-#let buttonK-l-shift = same-button
+#let buttonK-l-shift = sameInShift-button
 
-#let buttonL-l-shift = same-button
+#let buttonL-l-shift = sameInShift-button
 
-#let buttonM-l-shift = same-button
+#let buttonM-l-shift = sameInShift-button
 
-#let buttonN-l-shift = same-button
+#let buttonN-l-shift = sameInShift-button
 
-#let buttonO-l-shift = same-button
+#let buttonO-l-shift = sameInShift-button
 
-#let buttonP-l-shift = same-button
+#let buttonP-l-shift = sameInShift-button
 
 //right
-#let buttonA-r-shift = same-button
+#let buttonA-r-shift = sameInShift-button
 
-#let buttonB-r-shift = same-button
+#let buttonB-r-shift = sameInShift-button
 
-#let buttonC-r-shift = same-button
+#let buttonC-r-shift = sameInShift-button
 
-#let buttonD-r-shift = same-button
+#let buttonD-r-shift = sameInShift-button
 
-#let buttonE-r-shift = same-button
+#let buttonE-r-shift = sameInShift-button
 
-#let buttonF-r-shift = same-button
+#let buttonF-r-shift = sameInShift-button
 
-#let buttonG-r-shift = same-button
+#let buttonG-r-shift = sameInShift-button
 
-#let buttonH-r-shift = same-button
+#let buttonH-r-shift = sameInShift-button
 
-#let buttonI-r-shift = same-button
+#let buttonI-r-shift = sameInShift-button
 
-#let buttonJ-r-shift = same-button
+#let buttonJ-r-shift = sameInShift-button
 
-#let buttonK-r-shift = same-button
+#let buttonK-r-shift = sameInShift-button
 
-#let buttonL-r-shift = same-button
+#let buttonL-r-shift = sameInShift-button
 
-#let buttonM-r-shift = same-button
+#let buttonM-r-shift = sameInShift-button
 
-#let buttonN-r-shift = same-button
+#let buttonN-r-shift = sameInShift-button
 
-#let buttonO-r-shift = same-button
+#let buttonO-r-shift = sameInShift-button
 
-#let buttonP-r-shift = same-button
+#let buttonP-r-shift = sameInShift-button
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ page contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 === Layer Page - Menu <layers>
-
+test
 Pressing the layer button on any of the other pages 
 takes you to this page. 
 Pushing any of the switches

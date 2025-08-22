@@ -1,12 +1,14 @@
+#import "templates/text.typ":*
+
 #set page(
 //  margin: 50pt,
 //  flipped: true,
-  fill: rgb("161616")
+  fill: bgcolor
 )
 
 #set text(
   font: "Helvetica",
-  fill: rgb("d0d0d0")
+  fill: textcolor
 )
 
 #outline(depth: 4)
@@ -16,6 +18,7 @@
 
 = Controls
 #include "layout-overview.typ"
+
 
 == Non-layered inputs
 #include "encoders-top.typ"

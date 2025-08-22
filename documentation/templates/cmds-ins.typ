@@ -8,14 +8,14 @@
   command-type: "command",
   command-name: str, 
   command-description: none, 
-  target-type: str,
+  target: target,
   LED: none,
 ) = (
   page-name:page-name,
   command-type: command-type,
   command-name: command-name,
   command-description:command-description,
-  target-type: target-type,
+  target: target,
   LED: LED,
 )
 
@@ -23,14 +23,14 @@
   page-name: none,
   command-name: str, 
   command-description: none, 
-  target-type: str,
+  target: target,
   LED: none,
 ) = command(
   page-name:page-name,
   command-type: "pad",
   command-name: command-name,
   command-description:command-description,
-  target-type: target-type,
+  target: target,
   LED: LED,
 )
 
@@ -57,14 +57,14 @@
 #let unmapped-command = command(
   command-name: unmapped-text,
   command-description: none,
-  target-type: unmapped-text,
+  target: unmapped-target,
   LED: none,
 )
 
-#let same-command = command(
-  command-name: same-text,
+#let sameInShift-command = command(
+  command-name: sameInShift-text,
   command-description: none,
-  target-type: same-text,
+  target: sameInShift-target,
   LED: none,
 )
 
@@ -96,6 +96,7 @@
   for value in range(8) {
     return-array.push(cmd)
   }
+ 
   return-array
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -104,7 +105,7 @@
 #let input(
   type-input: str, 
   command: command,
-  target: str
+  target: target
 ) = (
   type-input: type-input,
   command:command,
@@ -113,7 +114,7 @@
 
 #let button(
   command: command,
-  target: dg,
+  target: global,
 ) = (
   input(
     type-input: "Button",
@@ -122,16 +123,16 @@
   )
 )
 
-#let same-button = button(
-  command: same-command,
-  target: same-text
+#let sameInShift-button = button(
+  command: sameInShift-command,
+  target: sameInShift-target
 )
 
 #let encoder(
   command-push: command, 
-  target-push: "",
+  target-push: target,
   command-turn: command, 
-  target-turn: "",
+  target-turn: target,
 ) = {
   let pushdict = input(
     type-input: "enconder-push",

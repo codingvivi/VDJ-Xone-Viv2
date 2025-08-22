@@ -64,32 +64,32 @@ etc).
 
 #let boxstyling(
   side:str,
-  upper-deck:str,
+  upper-deck-name:str,
   upper-fill:color,
-  lower-deck:str,
+  lower-deck-name:str,
   lower-fill:color,
 ) = (
   side:side,
-  upper-deck:upper-deck,
+  upper-deck-name:upper-deck-name,
   upper-fill:upper-fill,
-  lower-deck:lower-deck,
+  lower-deck-name:lower-deck-name,
   lower-fill:lower-fill,
 )
 
 #let leftboxstyling = boxstyling(
     side:"left", 
-    upper-deck: d1, 
-    upper-fill: deck1-color,
-    lower-deck: d3,
-    lower-fill: deck3-color,
+    upper-deck-name: deck1.name, 
+    upper-fill: deck1.color,
+    lower-deck-name: deck3.name,
+    lower-fill: deck3.color,
   )
 
 #let rightboxstyling = (
   side:"right", 
-  upper-deck: d2, 
-  upper-fill: deck2-color,
-  lower-deck: d4,
-  lower-fill: deck4-color,
+  upper-deck-name: deck2.name, 
+  upper-fill: deck2.color,
+  lower-deck-name: deck4.name,
+  lower-fill: deck4.color,
 )
 
 
@@ -120,9 +120,9 @@ etc).
           },
 
           rect( height: 20.9%, stroke: none,),
-          deckbox(fill: boxstyling.upper-fill, box-text: boxstyling.upper-deck),
+          deckbox(fill: boxstyling.upper-fill, box-text: boxstyling.upper-deck-name),
           rect( height: 1.3%, stroke: none,),
-          deckbox(fill: boxstyling.lower-fill, box-text: boxstyling.lower-deck),
+          deckbox(fill: boxstyling.lower-fill, box-text: boxstyling.lower-deck-name),
 
         )
       )
@@ -160,9 +160,9 @@ etc).
               },
 
           rect( width: 8.9%, stroke: none,),
-          deckbox(fill: boxstyling.upper-fill, box-text: boxstyling.upper-deck),
+          deckbox(fill: boxstyling.upper-fill, box-text: boxstyling.upper-deck-name),
           rect( width: 7.1%, stroke: none,),
-          deckbox(fill: boxstyling.lower-fill, box-text: boxstyling.lower-deck),
+          deckbox(fill: boxstyling.lower-fill, box-text: boxstyling.lower-deck-name),
           )
         ),
 
@@ -216,7 +216,9 @@ instead of being lined up in columns horizontally like in most other mappings.
 )
 #v(0.5em)
 
-The upper encoder section has the "top" deck on the left and the "bottom" deck on the right.
+The upper encoder section has the "top" deck on the left 
+and the "bottom" deck on the right, 
+        
 
 
 #pagebreak()

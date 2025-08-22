@@ -8,7 +8,7 @@
 #let slicer-pad = pad-command(
   command-name: "slicer pad",
   command-description:"",
-  target-type: dl
+  target: decklocal
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -20,9 +20,10 @@
   
   //normal mode pad
   create-pad-set(slicer-pad),
+  //create-pad-set(slicer-pad),
 
     //shift mode pad
-  create-duplicate-set(same-command)
+  create-duplicate-set(sameInShift-command)
 )
 
 
