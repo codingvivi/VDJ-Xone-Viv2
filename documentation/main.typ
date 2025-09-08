@@ -1,14 +1,14 @@
-#import "templates/text.typ":*
+#import "templates/text.typ": *
 
 #set page(
-//  margin: 50pt,
-//  flipped: true,
-  fill: bgcolor
+  //  margin: 50pt,
+  //  flipped: true,
+  fill: bgcolor,
 )
 
 #set text(
   font: "Helvetica",
-  fill: textcolor
+  fill: textcolor,
 )
 
 #outline(depth: 4)

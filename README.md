@@ -1,4 +1,3 @@
-
 # Xone Viv2 - A 2x2 deck, hybrid setup VDJ mapping
 
 The mapping I use for my 2 K2s with VirtualDJ.

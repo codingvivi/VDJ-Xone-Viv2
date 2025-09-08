@@ -28,6 +28,5 @@
   create-duplicate-set(sameInShift-command)
  // create-padpset(padname),
 )
-
 #pagebreak()
 

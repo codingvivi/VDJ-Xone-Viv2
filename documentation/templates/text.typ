@@ -1,9 +1,10 @@
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                   colors                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let bgcolor = rgb("#161616")
 
 #let textcolor = rgb("#d0d0d0")
+#let half-emptygray = rgb("#aaaaaa")
 #let emptygray = rgb("#525252")
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ deck colors ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -35,88 +36,92 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ target template ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let target(
   name: str,
-  color: color
+  color: color,
 ) = (
   name: name,
-  color: color
+  color: color,
 )
 
 #let multideck-gradient(deckcolor1, deckcolor2) = gradient.linear(
-deckcolor1,
-deckcolor2,
-space: oklch, 
-angle: 45deg,
+  deckcolor1,
+  deckcolor2,
+  space: oklch,
+  angle: 45deg,
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ single decks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let deck1 = target(
   name: "deck 1",
-  color: rgb("33b0ff")
+  color: rgb("33b0ff"),
 )
 
 #let deck2 = target(
   name: "deck 2",
-  color: rgb("ee5396")
+  color: rgb("ee5396"),
 )
 
 #let deck3 = target(
   name: "deck 3",
-  color: rgb("08bdba")
+  color: rgb("08bdba"),
 )
 
 #let deck4 = target(
   name: "deck 4",
-  color: rgb("ffb784")
+  color: rgb("ffb784"),
 )
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ multi decks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let deck13 = target(
   name: "deck 1 & 3",
-  color: multideck-gradient(deck1.color, deck3.color)
+  color: multideck-gradient(deck1.color, deck3.color),
 )
 
 #let deck24 = target(
   name: "deck 2 & 4",
-  color: multideck-gradient(deck2.color, deck4.color)
+  color: multideck-gradient(deck2.color, deck4.color),
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ local and global ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let decklocal = target(
   name: "local",
-  color: textcolor
+  color: textcolor,
 )
 
 #let global = target(
   name: "global",
-  color: textcolor
+  color: textcolor,
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ unmapped decks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let unmapped-target = target(
   name: unmapped-text, // using vars, see declaration
-  color: emptygray
+  color: emptygray,
 )
 
 #let sameInShift-target = target(
   name: sameInShift-text, // using vars, see declaration
-  color: emptygray
+  color: half-emptygray,
 )
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                  symbols                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ encoder symbols ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#let symbol-encp = sym.triangle.filled.b 
+#let symbol-encp = sym.triangle.filled.b
 #let symbol-encr = sym.triangle.filled.l + sym.triangle.filled.r
 
 #let write-symbols(cmdarray) = {
-  cmdarray.enumerate().map(((index, value)) => {
-    // Determine which content to prepend based on the index.
-    let prepend = if index <= 4 {
-      symbol-encp // Assumes 'encp' is defined
-    } else {
-      symbol-encr // Assumes 'encr' is defined
-    }
-    // Return the new, combined content for the new array.
-    prepend + value
-  }
-)}
+  cmdarray
+    .enumerate()
+    .map(
+      ((index, value)) => {
+        // Determine which content to prepend based on the index.
+        let prepend = if index <= 4 {
+          symbol-encp // Assumes 'encp' is defined
+        } else {
+          symbol-encr // Assumes 'encr' is defined
+        }
+        // Return the new, combined content for the new array.
+        prepend + value
+      },
+    )
+}
 

@@ -1,6 +1,6 @@
-#import "templates/text.typ":*
-#import "templates/cmds-ins.typ":*
-#import "templates/layouts.typ":*
+#import "templates/text.typ": *
+#import "templates/cmds-ins.typ": *
+#import "templates/layouts.typ": *
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               misc templates                               */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -9,53 +9,47 @@
 /*                               page commands                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let blankpage(letter) = command(
-    command-name:  text(fill: rgb("#aaaaaa"), "blank page"),
-    command-description:"", 
-    target: unmapped-target,
-    LED: none
+  command-name: text(fill: half-emptygray, "blank page"),
+  command-description: "",
+  target: unmapped-target,
+  LED: none,
 )
 
-#let pageA = command(
-    command-name: "A: play cntrl",
-    command-description: "",
-    target: decklocal
+#let page-play = command(
+  command-name: "play cntrl",
+  command-description: "",
+  target: decklocal,
 )
 
-
-#let pageB = command(
-    command-name: "B: slicer",
-    command-description: "",
-    target: decklocal
+#let page-slicer = command(
+  command-name: "slicer",
+  command-description: "",
+  target: decklocal,
 )
 
-
-#let pageC = command(
-    command-name: "C: beat roll",
-    command-description: "",
-    target: decklocal
+#let page-beatroll = command(
+  command-name: "beat roll",
+  command-description: "",
+  target: decklocal,
 )
 
-
-#let pageD = command(
-    command-name: "D: keycue",
-    command-description: "",
-    target: decklocal
+#let page-keycue = command(
+  command-name: "keycue",
+  command-description: "",
+  target: decklocal,
 )
 
-
-#let pageE = command(
-    command-name: "E: hotcues",
-    command-description: "",
-    target: decklocal
+#let page-hotcue = command(
+  command-name: "hotcues",
+  command-description: "",
+  target: decklocal,
 )
 
-
-#let pageF = command(
-    command-name: "F: cueloop",
-    command-description: "",
-    target: decklocal
+#let page-cueloop = command(
+  command-name: "cueloop",
+  command-description: "",
+  target: decklocal,
 )
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                  buttons                                   */
@@ -63,32 +57,32 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ normal mode ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 // left
 #let buttonA-l-normal = button(
-  command: pageA,
-  target: deck13
+  command: page-play,
+  target: deck13,
 )
 
 #let buttonB-l-normal = button(
-  command: pageB,
-  target: deck13
+  command: page-slicer,
+  target: deck13,
 )
 
 #let buttonC-l-normal = button(
-  command: pageC,
+  command: page-beatroll,
   target: deck13,
 )
 
 #let buttonD-l-normal = button(
-  command: pageD,
+  command: page-keycue,
   target: deck13,
 )
 
 #let buttonE-l-normal = button(
-  command: pageE,
+  command: page-hotcue,
   target: deck13,
 )
 
 #let buttonF-l-normal = button(
-  command: pageF,
+  command: page-cueloop,
   target: deck13,
 )
 
@@ -144,32 +138,32 @@
 
 //right
 #let buttonA-r-normal = button(
-  command: pageA,
-  target: deck24
+  command: page-play,
+  target: deck24,
 )
 
 #let buttonB-r-normal = button(
-  command: pageB,
-  target: deck24
+  command: page-slicer,
+  target: deck24,
 )
 
 #let buttonC-r-normal = button(
-  command: pageC,
+  command: page-beatroll,
   target: deck24,
 )
 
 #let buttonD-r-normal = button(
-  command: pageD,
+  command: page-keycue,
   target: deck24,
 )
 
 #let buttonE-r-normal = button(
-  command: pageE,
+  command: page-hotcue,
   target: deck24,
 )
 
 #let buttonF-r-normal = button(
-  command: pageF,
+  command: page-cueloop,
   target: deck24,
 )
 
@@ -290,43 +284,111 @@
 
 #let buttonP-r-shift = sameInShift-button
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ page contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let buttons-l-normal = (
+  buttonA-l-normal,
+  buttonB-l-normal,
+  buttonC-l-normal,
+  buttonD-l-normal,
+  buttonE-l-normal,
+  buttonF-l-normal,
+  buttonG-l-normal,
+  buttonH-l-normal,
+  buttonI-l-normal,
+  buttonJ-l-normal,
+  buttonK-l-normal,
+  buttonL-l-normal,
+  buttonM-l-normal,
+  buttonN-l-normal,
+  buttonO-l-normal,
+  buttonP-l-normal,
+)
+
+#let buttons-r-normal = (
+  buttonA-r-normal,
+  buttonB-r-normal,
+  buttonC-r-normal,
+  buttonD-r-normal,
+  buttonE-r-normal,
+  buttonF-r-normal,
+  buttonG-r-normal,
+  buttonH-r-normal,
+  buttonI-r-normal,
+  buttonJ-r-normal,
+  buttonK-r-normal,
+  buttonL-r-normal,
+  buttonM-r-normal,
+  buttonN-r-normal,
+  buttonO-r-normal,
+  buttonP-r-normal,
+)
+
+#let buttons-l-shift = (
+  buttonA-l-shift,
+  buttonB-l-shift,
+  buttonC-l-shift,
+  buttonD-l-shift,
+  buttonE-l-shift,
+  buttonF-l-shift,
+  buttonG-l-shift,
+  buttonH-l-shift,
+  buttonI-l-shift,
+  buttonJ-l-shift,
+  buttonK-l-shift,
+  buttonL-l-shift,
+  buttonM-l-shift,
+  buttonN-l-shift,
+  buttonO-l-shift,
+  buttonP-l-shift,
+)
+
+#let buttons-r-shift = (
+  buttonA-r-shift,
+  buttonB-r-shift,
+  buttonC-r-shift,
+  buttonD-r-shift,
+  buttonE-r-shift,
+  buttonF-r-shift,
+  buttonG-r-shift,
+  buttonH-r-shift,
+  buttonI-r-shift,
+  buttonJ-r-shift,
+  buttonK-r-shift,
+  buttonL-r-shift,
+  buttonM-r-shift,
+  buttonN-r-shift,
+  buttonO-r-shift,
+  buttonP-r-shift,
+)
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                               page contents                                */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 === Layer Page - Menu <layers>
-test
-Pressing the layer button on any of the other pages 
-takes you to this page. 
+Pressing the layer button on any of the other pages
+takes you to this page.
 Pushing any of the switches
 A-P
 takes the user to the switch's associated page of commands.
 
+//#prepend-page-letter(buttons-l-normal)
+
 #lrk2-vertshift-layout(
   buttonmatrixlayout(
-    buttonA-l-normal, buttonB-l-normal, buttonC-l-normal, buttonD-l-normal,
-    buttonE-l-normal, buttonF-l-normal, buttonG-l-normal, buttonH-l-normal,
-    buttonI-l-normal, buttonJ-l-normal, buttonK-l-normal, buttonL-l-normal,
-    buttonM-l-normal, buttonN-l-normal, buttonO-l-normal, buttonP-l-normal,
+    ..prepend-page-letter(buttons-l-normal),
   ),
 
   buttonmatrixlayout(
-    buttonA-r-normal, buttonB-r-normal, buttonC-r-normal, buttonD-r-normal,
-    buttonE-r-normal, buttonF-r-normal, buttonG-r-normal, buttonH-r-normal,
-    buttonI-r-normal, buttonJ-r-normal, buttonK-r-normal, buttonL-r-normal,
-    buttonM-r-normal, buttonN-r-normal, buttonO-r-normal, buttonP-r-normal,
+    ..prepend-page-letter(buttons-r-normal),
   ),
 
   buttonmatrixlayout(
-    buttonA-l-shift, buttonB-l-shift, buttonC-l-shift, buttonD-l-shift,
-    buttonE-l-shift, buttonF-l-shift, buttonG-l-shift, buttonH-l-shift,
-    buttonI-l-shift, buttonJ-l-shift, buttonK-l-shift, buttonL-l-shift,
-    buttonM-l-shift, buttonN-l-shift, buttonO-l-shift, buttonP-l-shift,
+    ..prepend-page-letter(buttons-l-shift),
   ),
 
   buttonmatrixlayout(
-    buttonA-r-shift, buttonB-r-shift, buttonC-r-shift, buttonD-r-shift,
-    buttonE-r-shift, buttonF-r-shift, buttonG-r-shift, buttonH-r-shift,
-    buttonI-r-shift, buttonJ-r-shift, buttonK-r-shift, buttonL-r-shift,
-    buttonM-r-shift, buttonN-r-shift, buttonO-r-shift, buttonP-r-shift,
-  )
+    ..prepend-page-letter(buttons-r-shift),
+  ),
 )
 
 #pagebreak()

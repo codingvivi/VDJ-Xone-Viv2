@@ -1,4 +1,4 @@
-#import "text.typ":*
+#import "text.typ": *
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                  commands                                  */
@@ -6,30 +6,32 @@
 #let command(
   page-name: none,
   command-type: "command",
-  command-name: str, 
-  command-description: none, 
+  command-name: str,
+  command-description: none,
+  color: textcolor,
   target: target,
   LED: none,
 ) = (
-  page-name:page-name,
+  page-name: page-name,
   command-type: command-type,
   command-name: command-name,
-  command-description:command-description,
+  command-description: command-description,
+  color: color,
   target: target,
   LED: LED,
 )
 
 #let pad-command(
   page-name: none,
-  command-name: str, 
-  command-description: none, 
+  command-name: str,
+  command-description: none,
   target: target,
   LED: none,
 ) = command(
-  page-name:page-name,
+  page-name: page-name,
   command-type: "pad",
   command-name: command-name,
-  command-description:command-description,
+  command-description: command-description,
   target: target,
   LED: LED,
 )
@@ -37,9 +39,8 @@
 #let pad-command-old(
   command-name: str,
   command-description: none,
-  LED: none
+  LED: none,
 ) = {
-
   return-dict = (:)
 
   for value in range(8) {
@@ -57,6 +58,7 @@
 #let unmapped-command = command(
   command-name: unmapped-text,
   command-description: none,
+  color: emptygray,
   target: unmapped-target,
   LED: none,
 )
@@ -64,17 +66,16 @@
 #let sameInShift-command = command(
   command-name: sameInShift-text,
   command-description: none,
+  color: half-emptygray,
   target: sameInShift-target,
   LED: none,
 )
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ command dulication ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let create-pad-set(pad-command) = {
-
   let return-array = ()
 
   for value in range(8) {
-
     let pad-number = str(value + 1)
 
     let value = command(
@@ -87,7 +88,6 @@
   }
 
   return-array
-
 }
 
 #let create-duplicate-set(cmd) = {
@@ -96,19 +96,19 @@
   for value in range(8) {
     return-array.push(cmd)
   }
- 
+
   return-array
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                   inputs                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let input(
-  type-input: str, 
+  type-input: str,
   command: command,
-  target: target
+  target: target,
 ) = (
   type-input: type-input,
-  command:command,
+  command: command,
   target: target,
 )
 
@@ -119,31 +119,23 @@
   input(
     type-input: "Button",
     command: command,
-    target: target
+    target: target,
   )
 )
 
 #let sameInShift-button = button(
   command: sameInShift-command,
-  target: sameInShift-target
+  target: sameInShift-target,
 )
 
 #let encoder(
-  command-push: command, 
+  command-push: command,
   target-push: target,
-  command-turn: command, 
+  command-turn: command,
   target-turn: target,
 ) = {
-  let pushdict = input(
-    type-input: "enconder-push",
-    command: command-push,
-    target: target-push
-  )
-  let turndict = input(
-    type-input: "encoder-turn",
-    command: command-turn,
-    target: target-turn
-  )
+  let pushdict = input(type-input: "enconder-push", command: command-push, target: target-push)
+  let turndict = input(type-input: "encoder-turn", command: command-turn, target: target-turn)
 
   pushdict.insert("inputsymbol", symbol-encp)
   turndict.insert("inputsymbol", symbol-encr)
@@ -152,8 +144,36 @@
     type-input: "encoder-full",
     push: pushdict,
     turn: turndict,
-  )  
+  )
   fulldict
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                              helper functions                              */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let prepend-page-letter(pagearray) = {
+  let updated-dict(dict, number) = {
+    let returndict = dict
 
+    let targetitem(inputdict) = inputdict.command.command-name
+
+    returndict.command.at("command-name") = numbering("A", number + 1) + ": " + returndict.command.at("command-name")
+
+    returndict
+  }
+
+  //let returnarray = ()
+
+  //for value in pagearray {
+  //  returnarray.push(updated-dict(pagearray.at(value), value + 1))
+  //}
+
+  //returnarray
+
+  let returnarray = pagearray
+    .enumerate()
+    .map(
+      ((index, page)) => updated-dict(page, index),
+    )
+  returnarray
+}
