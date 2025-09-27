@@ -37,9 +37,11 @@
 #let target(
   name: str,
   color: color,
+  stroke: none,
 ) = (
   name: name,
   color: color,
+  stroke: stroke,
 )
 
 #let multideck-gradient(deckcolor1, deckcolor2) = gradient.linear(
@@ -53,21 +55,25 @@
 #let deck1 = target(
   name: "deck 1",
   color: rgb("33b0ff"),
+  stroke: white,
 )
 
 #let deck2 = target(
   name: "deck 2",
   color: rgb("ee5396"),
+  stroke: white,
 )
 
 #let deck3 = target(
   name: "deck 3",
   color: rgb("08bdba"),
+  stroke: white,
 )
 
 #let deck4 = target(
   name: "deck 4",
   color: rgb("ffb784"),
+  stroke: black,
 )
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ multi decks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let deck13 = target(
@@ -91,6 +97,26 @@
   color: textcolor,
 )
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ software ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let VirtualDJ = target(
+  name: "VirtualDJ",
+  color: rgb("dc1212"),
+  stroke: white,
+)
+
+#let Ableton = target(
+  name: "Ableton Live",
+  color: rgb("0000ff"),
+  stroke: white,
+)
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ hardware ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let model1 = target(
+  name: "Model1",
+  color: rgb("ffffff"),
+  stroke: black,
+)
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ unmapped decks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #let unmapped-target = target(
   name: unmapped-text, // using vars, see declaration
@@ -101,6 +127,64 @@
   name: sameInShift-text, // using vars, see declaration
   color: half-emptygray,
 )
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                                    i/o                                     */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ templates ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#let connector(
+  spec: str,
+  amount: int,
+) = (
+  spec: spec,
+  amount: amount,
+)
+
+#let audio-io(
+  direction: str,
+  connector: connector,
+  target: target,
+  name: none,
+) = (
+  direction: direction,
+  connector: connector,
+  target: target,
+  name: name,
+)
+
+#let audio-in(
+  connector: connector,
+  target: target,
+  name: none,
+) = audio-io(
+  direction: "IN",
+  connector: connector,
+  target: target,
+  name: name,
+)
+
+#let audio-out(
+  connector: connector,
+  target: target,
+  name: none,
+) = audio-io(
+  direction: "OUT",
+  connector: connector,
+  target: target,
+  name: name,
+)
+
+#let cable(
+  IN: audio-in,
+  OUT: audio-out,
+) = (
+  IN: IN,
+  OUT: OUT,
+)
+
+
+
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                  symbols                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
