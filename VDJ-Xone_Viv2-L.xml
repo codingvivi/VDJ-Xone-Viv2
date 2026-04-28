@@ -1481,7 +1481,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 1 ? 
-			()
+			( deck 3 pitch_lock )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 2 ? 
 			()
