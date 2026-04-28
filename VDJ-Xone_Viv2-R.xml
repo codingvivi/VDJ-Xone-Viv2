@@ -28,7 +28,7 @@
 			(deck 2 hot_cue 1)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			(nothing)
+			(deck 2 cue_loop 1)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -79,7 +79,7 @@
 			(deck 2 hot_cue 2)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 2)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -131,7 +131,7 @@
 			(deck 2 hot_cue 3)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 3)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -182,7 +182,7 @@
 			(deck 2 hot_cue 4)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 4)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -234,7 +234,7 @@
 			(deck 2 hot_cue 5)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 5)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -287,7 +287,7 @@
 			(deck 2 hot_cue 6)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 6)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -337,7 +337,7 @@
 			(deck 2 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 7)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -388,7 +388,7 @@
 			(deck 2 hot_cue 8)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 2 cue_loop 8)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -438,7 +438,7 @@
 			(deck 4 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 1)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -488,7 +488,7 @@
 			(deck 4 hot_cue 2)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 2)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -538,7 +538,7 @@
 			(deck 4 hot_cue 3)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 3)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -588,7 +588,7 @@
 			(deck 4 hot_cue 4)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 4)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -638,7 +638,7 @@
 			(deck 4 hot_cue 5)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 5)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -688,7 +688,7 @@
 			(deck 4 hot_cue 6)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 6)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -738,7 +738,7 @@
 			(deck 4 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 7)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -788,7 +788,7 @@
 			(deck 4 hot_cue 8)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 6 ? 
-			()
+			(deck 4 cue_loop 8)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 7 ? 
 			()
@@ -1645,7 +1645,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 1 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 1 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1680,9 +1680,9 @@
 			()
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 2 ? color orange )
-		: var &apos;@$cmdpage&apos; 6 ? 
-			(
-		: var &apos;@$cmdpage&apos; 7 ? 
+		: var &apos;@$cmdpage&apos; 6 ?
+			( deck 2 cue_loop 2 ? color orange )
+		: var &apos;@$cmdpage&apos; 7 ?
 			(
 		: var &apos;@$cmdpage&apos; 8 ? 
 			(
@@ -1719,7 +1719,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 3 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 3 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1757,7 +1757,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 4 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 4 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1798,7 +1798,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			(deck 2  cue_color 5 green ? color green :  (deck 2  cue_color 5 orange ? color orange : (deck 2 cue_color 5 red ? color red :  (deck 2 cue_color 5 purple ? color red  :  (deck 2 hot_cute 5 ? (blink ? color red : nothing) : nothing) : nothing ) : nothing ) : nothing ) : nothing ) :)
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 5 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1833,7 +1833,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 6 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 6 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1867,7 +1867,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 7 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 7 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1902,7 +1902,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 2 hot_cue 8 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 2 cue_loop 8 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1936,7 +1936,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 1 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 1 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -1971,7 +1971,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 2 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 2 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -2006,7 +2006,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 3 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 3 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -2041,7 +2041,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 4 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 4 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -2076,7 +2076,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 5 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 5 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -2111,7 +2111,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 6 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 6 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -2146,7 +2146,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 7 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 7 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 
@@ -2181,7 +2181,7 @@
 		: var &apos;@$cmdpage&apos; 5 ? 
 			( deck 4 hot_cue 8 ? color orange )
 		: var &apos;@$cmdpage&apos; 6 ? 
-			()
+			( deck 4 cue_loop 8 ? color orange )
 		: var &apos;@$cmdpage&apos; 7 ? 
 			()
 		: var &apos;@$cmdpage&apos; 8 ? 

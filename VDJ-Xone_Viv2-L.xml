@@ -29,7 +29,7 @@
 			(deck 1 hot_cue 1)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			(nothing)
+			(deck 1 cue_loop 1)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -80,7 +80,7 @@
 			(deck 1 hot_cue 2)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 2)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -132,7 +132,7 @@
 			(deck 1 hot_cue 3)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 3)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -183,7 +183,7 @@
 			(deck 1 hot_cue 4)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 4)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -235,7 +235,7 @@
 			(deck 1 hot_cue 5)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 5)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -288,7 +288,7 @@
 			(deck 1 hot_cue 6)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 6)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -338,7 +338,7 @@
 			(deck 1 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 7)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -389,7 +389,7 @@
 			(deck 1 hot_cue 8)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 1 cue_loop 8)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -439,7 +439,7 @@
 			(deck 3 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 1)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -489,7 +489,7 @@
 			(deck 3 hot_cue 2)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 2)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -539,7 +539,7 @@
 			(deck 3 hot_cue 3)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 3)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -589,7 +589,7 @@
 			(deck 3 hot_cue 4)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 4)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -639,7 +639,7 @@
 			(deck 3 hot_cue 5)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 5)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -689,7 +689,7 @@
 			(deck 3 hot_cue 6)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 6)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -739,7 +739,7 @@
 			(deck 3 hot_cue 7)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 7)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -789,7 +789,7 @@
 			(deck 3 hot_cue 8)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			(deck 3 cue_loop 8)
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 7 ? 
 			()
@@ -1654,7 +1654,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 1 hot_cue 1 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 1 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1687,11 +1687,11 @@
 			()
 		: var &apos;@$cmdpagel&apos; 4 ? 
 			()
-		: var &apos;@$cmdpagel&apos; 5 ? 
+		: var &apos;@$cmdpagel&apos; 5 ?
 			( deck 1 hot_cue 2 ? color orange )
-		: var &apos;@$cmdpagel&apos; 6 ? 
-			(
-		: var &apos;@$cmdpagel&apos; 7 ? 
+		: var &apos;@$cmdpagel&apos; 6 ?
+			( deck 1 cue_loop 2 ? color orange )
+		: var &apos;@$cmdpagel&apos; 7 ?
 			(
 		: var &apos;@$cmdpagel&apos; 8 ? 
 			(
@@ -1728,7 +1728,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 1 hot_cue 3 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 3 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1766,7 +1766,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 1 hot_cue 4 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 4 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1807,7 +1807,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			(deck 1  cue_color 5 green ? color green :  (deck 1  cue_color 5 orange ? color orange : (deck 1 cue_color 5 red ? color red :  (deck 1 cue_color 5 purple ? color red  :  (deck 1 hot_cute 5 ? (blink ? color red : nothing) : nothing) : nothing ) : nothing ) : nothing ) : nothing ) :)
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 5 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1842,7 +1842,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 1 hot_cue 6 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 6 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1876,7 +1876,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 1 hot_cue 7 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 7 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1911,7 +1911,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 1 hot_cue 8 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 1 cue_loop 8 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1945,7 +1945,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 1 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 1 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -1980,7 +1980,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 2 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 2 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -2015,7 +2015,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 3 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 3 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -2050,7 +2050,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 4 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 4 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -2085,7 +2085,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 5 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 5 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -2120,7 +2120,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 6 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 6 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -2155,7 +2155,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 7 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 7 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
@@ -2190,7 +2190,7 @@
 		: var &apos;@$cmdpagel&apos; 5 ? 
 			( deck 3 hot_cue 8 ? color orange )
 		: var &apos;@$cmdpagel&apos; 6 ? 
-			()
+			( deck 3 cue_loop 8 ? color orange )
 		: var &apos;@$cmdpagel&apos; 7 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 8 ? 
