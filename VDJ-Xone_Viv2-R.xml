@@ -831,7 +831,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 2 goto_start)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1231,7 +1231,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 4 goto_start)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
