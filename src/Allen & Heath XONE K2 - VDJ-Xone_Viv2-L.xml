@@ -38,7 +38,7 @@
 			( )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			(  deck master effect_button 3 )
+			( deck master effect_button 15 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -89,7 +89,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 40 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -141,7 +141,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 65 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -192,7 +192,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 90 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -244,7 +244,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 17 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -297,7 +297,7 @@
 			()
 			: nothing &amp;
 		 var &apos;@$cmdpagel&apos; 9 ? 
-			() &amp; ( ) 
+			( deck master effect_button 42 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -347,7 +347,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 67 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -398,7 +398,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 92 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -448,7 +448,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 19 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -498,7 +498,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 44 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -548,7 +548,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 69 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -598,7 +598,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 94 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -648,7 +648,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 21 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -698,7 +698,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 46 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -748,7 +748,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 71 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()
@@ -798,7 +798,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 9 ? 
-			()
+			( deck master effect_button 96 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
 			()

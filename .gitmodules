@@ -1,0 +1,3 @@
+[submodule "external/vdj-quickfilter-pro"]
+	path = external/vdj-quickfilter-pro
+	url = https://github.com/codingvivi/vdj-quickfilter-pro
