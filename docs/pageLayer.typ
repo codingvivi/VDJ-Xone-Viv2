@@ -51,6 +51,18 @@
   target: decklocal,
 )
 
+#let page-quickfilters = command(
+  command-name: "quick filters",
+  command-description: "",
+  target: global,
+)
+
+#let page-qfpro = command(
+  command-name: "QFPro",
+  command-description: "",
+  target: global,
+)
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                                  buttons                                   */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -97,13 +109,13 @@
 )
 
 #let buttonI-l-normal = button(
-  command: blankpage("I"),
-  target: unmapped-target,
+  command: page-quickfilters,
+  target: global,
 )
 
 #let buttonJ-l-normal = button(
-  command: blankpage("J"),
-  target: unmapped-target,
+  command: page-qfpro,
+  target: global,
 )
 
 #let buttonK-l-normal = button(
@@ -178,13 +190,13 @@
 )
 
 #let buttonI-r-normal = button(
-  command: blankpage("I"),
-  target: unmapped-target,
+  command: page-quickfilters,
+  target: global,
 )
 
 #let buttonJ-r-normal = button(
-  command: blankpage("J"),
-  target: unmapped-target,
+  command: page-qfpro,
+  target: global,
 )
 
 #let buttonK-r-normal = button(
