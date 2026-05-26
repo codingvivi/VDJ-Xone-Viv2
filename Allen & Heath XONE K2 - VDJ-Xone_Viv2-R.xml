@@ -931,7 +931,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			( deck 2 beatjump_select 1 &amp; deck 2 beatjump -1 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -981,7 +981,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(deck 2 load)
+			(deck 2 beatjump_select 1 &amp; deck 2 beatjump +1)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1031,7 +1031,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			( deck 2 load )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1331,7 +1331,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			(deck 4 beatjump_select 1 &amp; deck 4 beatjump -1)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1381,7 +1381,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			(deck 4 load)
+			( deck 4 beatjump_select 1 &amp; deck 4 beatjump +1 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
@@ -1431,7 +1431,7 @@
 			() 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 1 ? 
-			()
+			( deck 4 load )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 2 ? 
 			()
