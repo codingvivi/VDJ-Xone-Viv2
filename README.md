@@ -29,14 +29,14 @@ exactly like they are shown in Virtual DJ
 to reduce mental overhead
 and misinputs.
 
-![decklayout](documentation/screenshot_layout_full.png)
+![decklayout](docs/screenshot_layout_full.png)
 
 ### Extensive track browser filtering
 
 WIP
 
 ## Manual
-Found [here](documentation/VDJ-XoneViv2-Manual.pdf). 
+Found [here](docs/VDJ-XoneViv2-Manual.pdf). 
 
 Since it's generated using [Typst](https://typst.app), 
 anyone who wants to edit this mapping to their liking
