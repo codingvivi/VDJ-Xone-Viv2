@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapper device="XONEK2" author="musicvivireal" version="850" date="2026-05-26">
 	<info>https://www.virtualdj.com/manuals/hardware/allenheath/k2.html</info>
-	<map value="ONINIT" action="set &apos;longjump&apos; 1 &amp; set_var &apos;$tests&apos; 2 " />
+	<map value="ONINIT" action="set &apos;longjump&apos; 1 &amp; set_var &apos;$tests&apos; 2 &amp; set &apos;@$qfoffset&apos; -1" />
 	<map value="K2R_2XK2_MODE" action="set &apos;@$cmdpage&apos; 0" />
 	<map value="K2L_2XK2_ENC_BTM_L" action="browser_window folders &amp; browser_scroll" />
 	<map value="K2L_2XK2_ENC_BTM_R" action="browser_window songs &amp; browser_scroll " />
@@ -37,7 +37,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 9 ? 
-			()
+			( quick_filter `get_var &apos;@$qfoffset&apos; &amp; param_add 1` )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
 			( var &apos;@$qfwin&apos; 0 ? ( deck master effect_button 18 ) : var &apos;@$qfwin&apos; 1 ? ( deck master effect_button 20 ) : var &apos;@$qfwin&apos; 2 ? ( deck master effect_button 22 ) : ( deck master effect_button 24 ) )
@@ -88,7 +88,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 9 ? 
-			()
+			( quick_filter `get_var &apos;@$qfoffset&apos; &amp; param_add 2` )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
 			( var &apos;@$qfwin&apos; 0 ? ( deck master effect_button 44 ) : var &apos;@$qfwin&apos; 1 ? ( deck master effect_button 46 ) : var &apos;@$qfwin&apos; 2 ? ( deck master effect_button 48 ) : ( deck master effect_button 50 ) )
@@ -140,7 +140,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 9 ? 
-			()
+			( quick_filter `get_var &apos;@$qfoffset&apos; &amp; param_add 3` )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
 			( var &apos;@$qfwin&apos; 0 ? ( deck master effect_button 70 ) : var &apos;@$qfwin&apos; 1 ? ( deck master effect_button 72 ) : var &apos;@$qfwin&apos; 2 ? ( deck master effect_button 74 ) : ( deck master effect_button 76 ) )
@@ -191,7 +191,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 9 ? 
-			()
+			( quick_filter `get_var &apos;@$qfoffset&apos; &amp; param_add 4` )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
 			( var &apos;@$qfwin&apos; 0 ? ( deck master effect_button 96 ) : var &apos;@$qfwin&apos; 1 ? ( deck master effect_button 98 ) : var &apos;@$qfwin&apos; 2 ? ( deck master effect_button 100 ) : ( deck master effect_button 102 ) )
