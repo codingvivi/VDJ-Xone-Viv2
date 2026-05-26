@@ -858,7 +858,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 3 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -908,7 +908,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 29 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -958,7 +958,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 55 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1008,7 +1008,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 81 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1058,7 +1058,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 5 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1108,7 +1108,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 31 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1158,7 +1158,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 57 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1208,7 +1208,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 83 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1258,7 +1258,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 7 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1308,7 +1308,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 33 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1358,7 +1358,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 59 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1408,7 +1408,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 85 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1458,7 +1458,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 9 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1508,7 +1508,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 35 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1558,7 +1558,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 61 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1608,7 +1608,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 10 ? 
-			()
+			( deck master effect_button 87 )
 			: nothing &amp;
 		var &apos;@$cmdpagel&apos; 11 ? 
 			()
@@ -1662,7 +1662,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_e_s_p30&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_e_pos&apos; 3.0 ? color green : var &apos;$qfpro_e_s_p30&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1698,7 +1698,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			(
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_h_s_p30&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_h_pos&apos; 3.0 ? color green : var &apos;$qfpro_h_s_p30&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			(
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1736,7 +1736,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_d_s_p30&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_d_pos&apos; 3.0 ? color green : var &apos;$qfpro_d_s_p30&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1774,7 +1774,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_p_s_p30&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_p_pos&apos; 3.0 ? color green : var &apos;$qfpro_p_s_p30&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1815,7 +1815,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_e_s_p20&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_e_pos&apos; 2.0 ? color green : var &apos;$qfpro_e_s_p20&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1850,7 +1850,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_h_s_p20&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_h_pos&apos; 2.0 ? color green : var &apos;$qfpro_h_s_p20&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1884,7 +1884,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_d_s_p20&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_d_pos&apos; 2.0 ? color green : var &apos;$qfpro_d_s_p20&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1919,7 +1919,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_p_s_p20&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_p_pos&apos; 2.0 ? color green : var &apos;$qfpro_p_s_p20&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1953,7 +1953,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_e_s_p10&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_e_pos&apos; 1.0 ? color green : var &apos;$qfpro_e_s_p10&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -1988,7 +1988,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_h_s_p10&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_h_pos&apos; 1.0 ? color green : var &apos;$qfpro_h_s_p10&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -2023,7 +2023,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_d_s_p10&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_d_pos&apos; 1.0 ? color green : var &apos;$qfpro_d_s_p10&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -2058,7 +2058,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_p_s_p10&apos; ? color orange )
+			( var_greater_or_equal &apos;$qfpro_p_pos&apos; 1.0 ? color green : var &apos;$qfpro_p_s_p10&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -2093,7 +2093,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_e_s_0&apos; ? color orange )
+			( var &apos;$qfpro_e_r_0&apos; ? color green : var &apos;$qfpro_e_s_0&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -2128,7 +2128,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_h_s_0&apos; ? color orange )
+			( var &apos;$qfpro_h_r_0&apos; ? color green : var &apos;$qfpro_h_s_0&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -2163,7 +2163,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_d_s_0&apos; ? color orange )
+			( var &apos;$qfpro_d_r_0&apos; ? color green : var &apos;$qfpro_d_s_0&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
@@ -2198,7 +2198,7 @@
 		: var &apos;@$cmdpagel&apos; 9 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 10 ? 
-			( var &apos;$qfpro_p_s_0&apos; ? color orange )
+			( var &apos;$qfpro_p_r_0&apos; ? color green : var &apos;$qfpro_p_s_0&apos; ? color orange )
 		: var &apos;@$cmdpagel&apos; 11 ? 
 			()
 		: var &apos;@$cmdpagel&apos; 12 ? 
