@@ -17,5 +17,5 @@ _link-side side:
     ln -s "{{src-dir}}/$src_file" "{{install-dir}}/$src_file"
 
 link:
-    just link l
-    just link r
+    just _link-side L
+    just _link-side R
