@@ -40,7 +40,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 15 )
+			( deck master effect_button 16 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -91,7 +91,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 40 )
+			( deck master effect_button 42 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -143,7 +143,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 65 )
+			( deck master effect_button 68 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -194,7 +194,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 90 )
+			( deck master effect_button 94 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -246,7 +246,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 17 )
+			( deck master effect_button 18 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -299,7 +299,7 @@
 			() &amp; (deck 2 var &apos;@syncbtn&apos; &amp;&amp; deck 2 var &apos;@quantize&apos; ? deck 2 sync)) 
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 42 )
+			( deck master effect_button 44 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -349,7 +349,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 67 )
+			( deck master effect_button 70 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -400,7 +400,7 @@
 			(deck 2 phrase_sync)
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 92 )
+			( deck master effect_button 96 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -450,7 +450,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 19 )
+			( deck master effect_button 20 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -500,7 +500,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 44 )
+			( deck master effect_button 46 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -550,7 +550,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 69 )
+			( deck master effect_button 72 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -600,7 +600,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 94 )
+			( deck master effect_button 98 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -650,7 +650,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 21 )
+			( deck master effect_button 22 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -700,7 +700,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 46 )
+			( deck master effect_button 48 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -750,7 +750,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 71 )
+			( deck master effect_button 74 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
@@ -800,7 +800,7 @@
 			()
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 10 ? 
-			( deck master effect_button 96 )
+			( deck master effect_button 100 )
 			: nothing &amp;
 		var &apos;@$cmdpage&apos; 11 ? 
 			()
