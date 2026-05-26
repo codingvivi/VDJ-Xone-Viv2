@@ -84,6 +84,12 @@
   target: decklocal,
 )
 
+#let pitchlock = command(
+  command-name: "pitch lock",
+  command-description: "",
+  target: decklocal,
+)
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /*                               page contents                                */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -95,7 +101,7 @@
   ),
   (
     beginning, mastertempo, editgrid, load,
-    sameInShift-command, sameInShift-command, sameInShift-command,sameInShift-command
+    sameInShift-command, pitchlock, sameInShift-command,sameInShift-command
   )
 )
 
