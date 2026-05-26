@@ -2776,6 +2776,6 @@
 	<map value="SHIFT_K2R_2XK2_ENC_BTM_L" action="sideview " />
 	<map value="K2R_2XK2_ENC_BTM_R_PUSH" action="browser_zoom" />
 	<map value="SHIFT_K2R_2XK2_ENC_BTM_R" action="font_size" />
-	<map value="K2R_2XK2_ENC_BTM_R" action="param_multiply 2 &amp;param_cast percentage &amp; zoom" />
+	<map value="K2R_2XK2_ENC_BTM_R" action="var &apos;@$cmdpage&apos; 10 ? cycle &apos;@$qfwin&apos; 4 : ( param_multiply 2 &amp; param_cast percentage &amp; zoom )" />
 	<map value="SHIFT_K2R_2XK2_ENC_BTM_L_PUSH" action="sidelist_clear" />
 </mapper>
